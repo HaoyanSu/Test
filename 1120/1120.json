@@ -1,1 +1,237 @@
-{"id":"00000000-0000-0000-0000-000000001120","name":"ai-movie-poster-generator","author":"c","title":"AI Movie Poster Generator","description":"Design poster-worthy visuals from ideas with full creative control.","metadata_title":"AI Movie Poster Generator For Free - Create Cinematic Art","metadata_description":"Use the AI movie poster generator to create custom posters quickly and easily. Ideal for all skill levels. Try it free now!","playground_type":"chat_model","model_order":1120,"order":1120,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000011120","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/1120/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of AI Movie Poster Generator","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Make Your Film Feel Bigger Than Life","content":"You've got a script, a vision, maybe a $20 budget. The ai movie poster generator gives your story its own silver screen spotlight with just a few vivid prompts. Create posters that scream 'feature debut'—even if it was shot in your garage. With the ai movie poster generator, your idea doesn’t just exist—it gets admired on imaginary billboards at dusk.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Your Weirdest Movie Night, Now Has a Poster","content":"Planning a fake film festival with your roommates? The ai movie poster generator turns inside jokes into Hollywood-worthy visuals. Input your bizarre genre mashups—don’t worry, it understands chaos. The ai movie poster generator thrives on absurdity, crafting AI-generated posters that could easily headline a streaming thumbnail… or a dream.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Break Out of the Usual Visuals Fast","content":"Creative rut? Tell the ai movie poster generator a mood, a word, a whisper of an idea—and it spins posters in places your imagination hasn’t dared. No blank canvases, no safe choices. This AI-based movie poster maker digs into the strange corners of style, where pulp meets poetry and algorithms flirt with Cannes.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use an AI Movie Poster Generator","item_columns":3,"items":[{"title":"Showcase Your Vision","content":"Whether you're pitching a concept or dreaming up your next film, the ai movie poster generator helps you express your unique story world visually, giving your ideas a powerful creative presence that speaks before a single word is said."},{"title":"Create Without Limits","content":"With the ai movie poster generator, you're not bound by budgets or technical skills—just your imagination. Explore new genres, reimagine classics, or invent cinematic worlds with total freedom anytime inspiration strikes."},{"title":"Make It Personal","content":"Transform your inside jokes, friend group stories, or life moments into cinematic art using the ai movie poster generator. It's a fun way to celebrate your identity and creativity in an instantly shareable format."}]},{"section_type":"title-description-centered-icon-block","title":"The Best AI Movie Poster Generator Ever","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use AI Movie Poster Generator","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our movie posters tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into movie posters artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI Movie Poster Generator","introduction":"The ai movie poster generator is your creative launchpad for unforgettable visuals—whether you’re a filmmaker, a fanfic dreamer, or just pitching an idea with style. Instantly transform your concepts into eye-catching, genre-spanning posters using intuitive prompts and cinematic AI magic.\n\nMaybe your short film stars your friends and a backyard flashlight—but with the ai movie poster generator, it gets the epic art treatment it deserves. Or maybe you're inventing a fake noir western for fun. Either way, this generator turns blurbs into blockbusters. Fade in. Drama cue. Poster up."},{"section_type":"explore","title":"Explore AI Movie Poster Generator Examples","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000001120",
+    "name": "ai-movie-poster-generator",
+    "author": "c",
+    "title": "AI Movie Poster Generator",
+    "description": "Design poster-worthy visuals from ideas with full creative control.",
+    "metadata_title": "AI Movie Poster Generator For Free - Create Cinematic Art",
+    "metadata_description": "Use the AI movie poster generator to create custom posters quickly and easily. Ideal for all skill levels. Try it free now!",
+    "playground_type": "chat_model",
+    "model_order": 1120,
+    "order": 1120,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000011120",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": {
+                    "enhancer": "DefaultTemplateEnhancer",
+                    "enhancer_config": {
+                        "template": "${prompt}"
+                    }
+                }
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/1120/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of AI Movie Poster Generator",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Make Your Film Feel Bigger Than Life",
+                        "content": "You've got a script, a vision, maybe a $20 budget. The ai movie poster generator gives your story its own silver screen spotlight with just a few vivid prompts. Create posters that scream 'feature debut'—even if it was shot in your garage. With the ai movie poster generator, your idea doesn’t just exist—it gets admired on imaginary billboards at dusk.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Your Weirdest Movie Night, Now Has a Poster",
+                        "content": "Planning a fake film festival with your roommates? The ai movie poster generator turns inside jokes into Hollywood-worthy visuals. Input your bizarre genre mashups—don’t worry, it understands chaos. The ai movie poster generator thrives on absurdity, crafting AI-generated posters that could easily headline a streaming thumbnail… or a dream.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Break Out of the Usual Visuals Fast",
+                        "content": "Creative rut? Tell the ai movie poster generator a mood, a word, a whisper of an idea—and it spins posters in places your imagination hasn’t dared. No blank canvases, no safe choices. This AI-based movie poster maker digs into the strange corners of style, where pulp meets poetry and algorithms flirt with Cannes.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use an AI Movie Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Showcase Your Vision",
+                        "content": "Whether you're pitching a concept or dreaming up your next film, the ai movie poster generator helps you express your unique story world visually, giving your ideas a powerful creative presence that speaks before a single word is said."
+                    },
+                    {
+                        "title": "Create Without Limits",
+                        "content": "With the ai movie poster generator, you're not bound by budgets or technical skills—just your imagination. Explore new genres, reimagine classics, or invent cinematic worlds with total freedom anytime inspiration strikes."
+                    },
+                    {
+                        "title": "Make It Personal",
+                        "content": "Transform your inside jokes, friend group stories, or life moments into cinematic art using the ai movie poster generator. It's a fun way to celebrate your identity and creativity in an instantly shareable format."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "The Best AI Movie Poster Generator Ever",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use AI Movie Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our movie posters tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into movie posters artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI Movie Poster Generator",
+                "introduction": "The ai movie poster generator is your creative launchpad for unforgettable visuals—whether you’re a filmmaker, a fanfic dreamer, or just pitching an idea with style. Instantly transform your concepts into eye-catching, genre-spanning posters using intuitive prompts and cinematic AI magic.\n\nMaybe your short film stars your friends and a backyard flashlight—but with the ai movie poster generator, it gets the epic art treatment it deserves. Or maybe you're inventing a fake noir western for fun. Either way, this generator turns blurbs into blockbusters. Fade in. Drama cue. Poster up."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore AI Movie Poster Generator Examples",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}

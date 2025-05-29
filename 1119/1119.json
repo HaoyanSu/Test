@@ -1,1 +1,237 @@
-{"id":"00000000-0000-0000-0000-000000001119","name":"business-card-maker","author":"c","title":"AI Business Card Maker","description":"Create flexible, design-led cards with intuitive controls and style.","metadata_title":"Free Business Card Maker - Design Custom Cards Fast","metadata_description":"Quickly design custom business cards using our online business card maker. No design skills needed. Generate now!","playground_type":"chat_model","model_order":1119,"order":1119,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000011119","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/1119/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of the AI Business Card Maker","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Explore Your Style in a Swipe","content":"You're craving a business card that actually feels like you—but your brain is blank and every font starts looking the same. Our AI-powered business card maker spins prompts into portfolios of fresh, unexpected designs. You get multiple looks instantly, making it easier to say yes to a vibe. Think brainstorm, but clicked into color.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"From Vague Idea to Visual Reality","content":"You’ve got a vision—it’s somewhere between ‘chill minimal’ and ‘cosmic-cool professional’—but turning that into a design feels impossible. This business card maker translates your aesthetic soup into options that actually look intentional. With the business card maker, your brand becomes real, faster than you can moodboard it.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Say Goodbye to Design Overwhelm","content":"You’ve opened five tabs, scanned fifty templates, and somehow all of them feel wrong. This business card maker skips the soulless scroll by turning your vibe into high-quality concepts in seconds. It's not just AI-generated—it’s AI-attuned to your energy. Like magic, minus the spreadsheet.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use the AI Business Card Maker","item_columns":3,"items":[{"title":"Express Your Identity","content":"Whether you're launching your first side hustle or reinventing your personal brand, a business card maker lets you craft a design that reflects who you are and what you stand for—without needing a designer."},{"title":"Create Without Limits","content":"Let your imagination lead the way. With a business card maker, you can easily experiment with colors, layouts, and fonts to design something as unique as your vision, no artistic background required."},{"title":"Make Instant Impressions","content":"When opportunity strikes, you don't want to wait. A business card maker helps you create professional, personalized cards on demand so you’re always ready to leave a lasting mark at every meeting or event."}]},{"section_type":"title-description-centered-icon-block","title":"AI Business Card Maker You Can Trust","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use the AI Business Card Maker","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our business card tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into business card artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI Business Card Maker","introduction":"The AI Business Card Maker is your shortcut to visually stunning, personality-forward business cards—designed in seconds, and endlessly tweakable. Whether you're launching your brand or rebooting your identity, this business card maker helps you transform messy vibes into polished visuals, no design skills required.\nTired of cookie-cutter templates that leave you feeling flat? This business card maker is for late-night dreamers, identity reinventors, and visuals-first thinkers who want options—moods, palettes, energies—without the creative paralysis. Every card is a style sketch, whispering who you could become. Let's begin at the edge of your next era."},{"section_type":"explore","title":"Explore the AI Business Card Maker","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000001119",
+    "name": "business-card-maker",
+    "author": "c",
+    "title": "AI Business Card Maker",
+    "description": "Create flexible, design-led cards with intuitive controls and style.",
+    "metadata_title": "Free Business Card Maker - Design Custom Cards Fast",
+    "metadata_description": "Quickly design custom business cards using our online business card maker. No design skills needed. Generate now!",
+    "playground_type": "chat_model",
+    "model_order": 1119,
+    "order": 1119,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000011119",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": {
+                    "enhancer": "DefaultTemplateEnhancer",
+                    "enhancer_config": {
+                        "template": "${prompt}"
+                    }
+                }
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/1119/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of the AI Business Card Maker",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Explore Your Style in a Swipe",
+                        "content": "You're craving a business card that actually feels like you—but your brain is blank and every font starts looking the same. Our AI-powered business card maker spins prompts into portfolios of fresh, unexpected designs. You get multiple looks instantly, making it easier to say yes to a vibe. Think brainstorm, but clicked into color.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "From Vague Idea to Visual Reality",
+                        "content": "You’ve got a vision—it’s somewhere between ‘chill minimal’ and ‘cosmic-cool professional’—but turning that into a design feels impossible. This business card maker translates your aesthetic soup into options that actually look intentional. With the business card maker, your brand becomes real, faster than you can moodboard it.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Say Goodbye to Design Overwhelm",
+                        "content": "You’ve opened five tabs, scanned fifty templates, and somehow all of them feel wrong. This business card maker skips the soulless scroll by turning your vibe into high-quality concepts in seconds. It's not just AI-generated—it’s AI-attuned to your energy. Like magic, minus the spreadsheet.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use the AI Business Card Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Express Your Identity",
+                        "content": "Whether you're launching your first side hustle or reinventing your personal brand, a business card maker lets you craft a design that reflects who you are and what you stand for—without needing a designer."
+                    },
+                    {
+                        "title": "Create Without Limits",
+                        "content": "Let your imagination lead the way. With a business card maker, you can easily experiment with colors, layouts, and fonts to design something as unique as your vision, no artistic background required."
+                    },
+                    {
+                        "title": "Make Instant Impressions",
+                        "content": "When opportunity strikes, you don't want to wait. A business card maker helps you create professional, personalized cards on demand so you’re always ready to leave a lasting mark at every meeting or event."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "AI Business Card Maker You Can Trust",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use the AI Business Card Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our business card tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into business card artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI Business Card Maker",
+                "introduction": "The AI Business Card Maker is your shortcut to visually stunning, personality-forward business cards—designed in seconds, and endlessly tweakable. Whether you're launching your brand or rebooting your identity, this business card maker helps you transform messy vibes into polished visuals, no design skills required.\nTired of cookie-cutter templates that leave you feeling flat? This business card maker is for late-night dreamers, identity reinventors, and visuals-first thinkers who want options—moods, palettes, energies—without the creative paralysis. Every card is a style sketch, whispering who you could become. Let's begin at the edge of your next era."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore the AI Business Card Maker",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}
