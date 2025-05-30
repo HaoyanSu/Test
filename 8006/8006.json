@@ -1,1 +1,237 @@
-{"id":"00000000-0000-0000-0000-000000008006","name":"ai-emoji-generator","author":"c","title":"AI Emoji Generator","description":"Turn concepts into unique, expressive emojis with precise control.","metadata_title":"AI Emoji Generator For Free - Create Custom Emojis Fast","metadata_description":"Use our AI emoji generator to quickly create diverse emoji from text. Suitable for all skill levels. Generate now!","playground_type":"chat_model","model_order":8006,"order":8006,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018006","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8006/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of the AI Emoji Generator","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Customize Emojis for Any Aesthetic","content":"When standard emoji sets don't cut it, your style deserves more. This ai emoji generator lets you shape unique emoji designs from your own text prompts, giving you total control over look, color, vibe, and format. Whether you're going maximalist, minimalist, or something in between, the ai emoji generator delivers endless custom visual options designed for brand expression, digital identity, and storytelling.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Stand Out with Fresh, AI-Generated Icons","content":"Tired of blending in with generic emoji packs? This ai emoji generator spins everyday emotions, moods, and ideas into never-before-seen visual gems—in seconds. Using cutting-edge AI-generated imagery, it helps you craft playful or poetic icons that feel personal, not preloaded. Get share-worthy content, social-friendly assets, and visual originality, twice as fast with the ai emoji generator.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Explore Wild Visual Directions, Fast","content":"Need ten variations of a ghost with disco boots? Or a mango with mysterious energy? The ai emoji generator thrives on visual experimentation—turning your oddest prompts into aesthetic gold. It's not just playful, it's wildly productive, helping you explore emoji design ideas rapidly while supporting creative workflows in social media, app UI, and digital branding. The ai emoji generator is your weirdest moodboard, unleashed.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use the AI Emoji Generator","item_columns":3,"items":[{"title":"Express Your Identity","content":"When standard emojis don't capture who you are, an ai emoji generator empowers you to design expressions that reflect your uniqueness, allowing you to communicate in a way that's personal, meaningful, and unmistakably you."},{"title":"Fuel Creative Moments","content":"Whether you're crafting a message, post, or digital story, the ai emoji generator gives you a playful canvas to dream up original icons that spark imagination and bring your ideas vividly to life."},{"title":"Tailor Every Interaction","content":"Skip overused symbols and shape emojis that match your moment exactly. With the ai emoji generator, you create expressions that feel right—perfect for making conversations more engaging and authentically yours."}]},{"section_type":"title-description-centered-icon-block","title":"AI Emoji Generator That’s Fast and Free","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use the AI Emoji Generator","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our emoji tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into emoji artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to the AI Emoji Generator","introduction":"The AI Emoji Generator is a creativity-first tool built for artists, content creators, designers, and anyone looking to craft unique emoji visuals. It transforms your text or text-and-image prompts into expressive, one-of-a-kind emojis—whether you're building brand assets, punchy social icons, or playful digital stickers.\nIts beauty is in the emotional precision: this ai emoji generator captures your weird, wonderful, wildly specific ideas—and brings them to life with layered visual flair. From neon glitch bunnies to melancholy moonfaces, the ai emoji generator doesn’t just speed creation. It makes your inner world legible, one emoji at a time."},{"section_type":"explore","title":"Explore Results of AI Emoji Generator","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008006",
+    "name": "ai-emoji-generator",
+    "author": "c",
+    "title": "AI Emoji Generator",
+    "description": "Turn concepts into unique, expressive emojis with precise control.",
+    "metadata_title": "AI Emoji Generator For Free - Create Custom Emojis Fast",
+    "metadata_description": "Use our AI emoji generator to quickly create diverse emoji from text. Suitable for all skill levels. Generate now!",
+    "playground_type": "chat_model",
+    "model_order": 8006,
+    "order": 8006,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018006",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": {
+                    "enhancer": "DefaultTemplateEnhancer",
+                    "enhancer_config": {
+                        "template": "${prompt}"
+                    }
+                }
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8006/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of the AI Emoji Generator",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Customize Emojis for Any Aesthetic",
+                        "content": "When standard emoji sets don't cut it, your style deserves more. This ai emoji generator lets you shape unique emoji designs from your own text prompts, giving you total control over look, color, vibe, and format. Whether you're going maximalist, minimalist, or something in between, the ai emoji generator delivers endless custom visual options designed for brand expression, digital identity, and storytelling.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Stand Out with Fresh, AI-Generated Icons",
+                        "content": "Tired of blending in with generic emoji packs? This ai emoji generator spins everyday emotions, moods, and ideas into never-before-seen visual gems—in seconds. Using cutting-edge AI-generated imagery, it helps you craft playful or poetic icons that feel personal, not preloaded. Get share-worthy content, social-friendly assets, and visual originality, twice as fast with the ai emoji generator.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Explore Wild Visual Directions, Fast",
+                        "content": "Need ten variations of a ghost with disco boots? Or a mango with mysterious energy? The ai emoji generator thrives on visual experimentation—turning your oddest prompts into aesthetic gold. It's not just playful, it's wildly productive, helping you explore emoji design ideas rapidly while supporting creative workflows in social media, app UI, and digital branding. The ai emoji generator is your weirdest moodboard, unleashed.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use the AI Emoji Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Express Your Identity",
+                        "content": "When standard emojis don't capture who you are, an ai emoji generator empowers you to design expressions that reflect your uniqueness, allowing you to communicate in a way that's personal, meaningful, and unmistakably you."
+                    },
+                    {
+                        "title": "Fuel Creative Moments",
+                        "content": "Whether you're crafting a message, post, or digital story, the ai emoji generator gives you a playful canvas to dream up original icons that spark imagination and bring your ideas vividly to life."
+                    },
+                    {
+                        "title": "Tailor Every Interaction",
+                        "content": "Skip overused symbols and shape emojis that match your moment exactly. With the ai emoji generator, you create expressions that feel right—perfect for making conversations more engaging and authentically yours."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "AI Emoji Generator That's Fast and Free",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use the AI Emoji Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our emoji tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into emoji artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to the AI Emoji Generator",
+                "introduction": "The AI Emoji Generator is a creativity-first tool built for artists, content creators, designers, and anyone looking to craft unique emoji visuals. It transforms your text or text-and-image prompts into expressive, one-of-a-kind emojis—whether you're building brand assets, punchy social icons, or playful digital stickers.\nIts beauty is in the emotional precision: this ai emoji generator captures your weird, wonderful, wildly specific ideas—and brings them to life with layered visual flair. From neon glitch bunnies to melancholy moonfaces, the ai emoji generator doesn't just speed creation. It makes your inner world legible, one emoji at a time."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore Results of AI Emoji Generator",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}

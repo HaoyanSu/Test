@@ -16,7 +16,7 @@ No, you don't need an account to use the birthday invitation card maker. You're 
 Q:
 Can I use the birthday invitation card maker on my phone?
 A:
-Yes, the birthday invitation card maker is fully accessible on mobile browsers. You can create and generate directly from your smartphone or tablet with no downloads required. A dedicated mobile app is also in development for an even smoother experience soon.
+Yes, the birthday invitation card maker is fully accessible on mobile browsers. You can create and generate directly from your smartphone or tablet with no downloads required. 
 ===
 Q:
 What makes this birthday invitation card maker different from other tools?

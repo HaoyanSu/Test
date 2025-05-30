@@ -16,7 +16,7 @@ No, you don’t need an account to use the invitation card maker. It gives you 5
 Q:
 Can I use the invitation card maker on my phone?
 A:
-Yes, the invitation card maker works smoothly on mobile browsers, so you can create invitations directly from your phone or tablet. It's designed to be accessible online with no setup needed. A dedicated mobile app is also on the way for an even better experience.
+Yes, the invitation card maker works smoothly on mobile browsers, so you can create invitations directly from your phone or tablet. It's designed to be accessible online with no setup needed. 
 ===
 Q:
 How can I get better results from the invitation card maker?

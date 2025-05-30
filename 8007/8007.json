@@ -1,1 +1,237 @@
-{"id":"00000000-0000-0000-0000-000000008007","name":"invitation-card-maker","author":"c","title":"AI Invitation Card Maker","description":"Design stylish, editable invites with AI—fast, flexible, and free","metadata_title":"Invitation Card Maker For Free - Custom AI Designs Fast","metadata_description":"Create custom invitations quickly with our online invitation card maker. Input details, select templates, and generate instantly. Try it free.","playground_type":"chat_model","model_order":8007,"order":8007,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018007","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8007/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of the Invitation Card Maker","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Jumpstart Your Vision with AI Inspiration","content":"You know the mood you want—romantic, whimsical, maybe even a bit cheeky—but getting started feels like staring at a blank page. The invitation card maker turns your ideas into AI-generated visuals in seconds, offering elegant styles and fresh layouts. This invitation card maker helps you go from concept to creation without the creative block.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Design Without Design Skills","content":"Polished appearance matters, but not everyone has the time—or tools—to learn professional design software. The invitation card maker makes that irrelevant by bringing beautiful, camera-ready invitation cards to life through simple text or image prompts. This intuitive invitation card maker empowers anyone to be their own visual designer, no software, no stress.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Let Emotion Lead the Design","content":"You want your invitation to speak from the heart—not feel like a copy-paste job. With the invitation card maker, you can create visuals that echo your tone, your vibe, your story. Whether it's playful or poetic, the invitation card maker channels your intent into visuals that feel personal, not pre-fab. Let the feelings drive the format.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use an Invitation Card Maker","item_columns":3,"items":[{"title":"Express Your Vision","content":"Bring your unique celebration to life with an invitation card maker that lets your personality shine through every font, color, and image—turning your ideas into a design that truly reflects who you are."},{"title":"Save Time Creatively","content":"Skip the stress of design logistics and focus on the fun—an invitation card maker gives you fast, imaginative options to craft something personal, even when time is short and memories are waiting."},{"title":"Celebrate Every Detail","content":"From whimsical birthdays to elegant weddings, an invitation card maker helps you highlight the heart of your event by customizing even the smallest elements, ensuring your invites feel meaningful and memorable."}]},{"section_type":"title-description-centered-icon-block","title":"Best Invitation Card Maker You Can Try","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use the Invitation Card Maker","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our invitation card tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into invitation card artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI Invitation Card Maker","introduction":"The invitation card maker is an AI-powered design tool that helps you generate elegant, ready-to-use visuals for any celebration. Whether you're crafting invites for a wedding, milestone birthday, or baby shower, this smart invitation card maker brings your ideas to life with speed, style, and personalized flair.\nWhen your vision is vivid but your design skills stall, this invitation card maker opens a world of inspired possibilities. No need for fancy software or hours of tweaking—just words, and the magic begins. Your aesthetic meets AI intuition, and suddenly, you're not just planning a party... you're setting the tone for a memory."},{"section_type":"explore","title":"Explore Designs Made With Invitation Card Maker","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008007",
+    "name": "invitation-card-maker",
+    "author": "c",
+    "title": "AI Invitation Card Maker",
+    "description": "Design stylish, editable invites with AI—fast, flexible, and free",
+    "metadata_title": "Invitation Card Maker For Free - Custom AI Designs Fast",
+    "metadata_description": "Create custom invitations quickly with our online invitation card maker. Input details, describe style, and generate instantly. Try it free.",
+    "playground_type": "chat_model",
+    "model_order": 8007,
+    "order": 8007,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018007",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": {
+                    "enhancer": "DefaultTemplateEnhancer",
+                    "enhancer_config": {
+                        "template": "${prompt}"
+                    }
+                }
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8007/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of the Invitation Card Maker",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Jumpstart Your Vision with AI Inspiration",
+                        "content": "You know the mood you want—romantic, whimsical, maybe even a bit cheeky—but getting started feels like staring at a blank page. The invitation card maker turns your ideas into AI-generated visuals in seconds, offering elegant styles and fresh layouts. This invitation card maker helps you go from concept to creation without the creative block.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Design Without Design Skills",
+                        "content": "Polished appearance matters, but not everyone has the time—or tools—to learn professional design software. The invitation card maker makes that irrelevant by bringing beautiful, camera-ready invitation cards to life through simple text or image prompts. This intuitive invitation card maker empowers anyone to be their own visual designer, no software, no stress.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Let Emotion Lead the Design",
+                        "content": "You want your invitation to speak from the heart—not feel like a copy-paste job. With the invitation card maker, you can create visuals that echo your tone, your vibe, your story. Whether it's playful or poetic, the invitation card maker channels your intent into visuals that feel personal, not pre-fab. Let the feelings drive the format.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use an Invitation Card Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Express Your Vision",
+                        "content": "Bring your unique celebration to life with an invitation card maker that lets your personality shine through every font, color, and image—turning your ideas into a design that truly reflects who you are."
+                    },
+                    {
+                        "title": "Save Time Creatively",
+                        "content": "Skip the stress of design logistics and focus on the fun—an invitation card maker gives you fast, imaginative options to craft something personal, even when time is short and memories are waiting."
+                    },
+                    {
+                        "title": "Celebrate Every Detail",
+                        "content": "From whimsical birthdays to elegant weddings, an invitation card maker helps you highlight the heart of your event by customizing even the smallest elements, ensuring your invites feel meaningful and memorable."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "Best Invitation Card Maker You Can Try",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use the Invitation Card Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our invitation card tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into invitation card artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI Invitation Card Maker",
+                "introduction": "The invitation card maker is an AI-powered design tool that helps you generate elegant, ready-to-use visuals for any celebration. Whether you're crafting invites for a wedding, milestone birthday, or baby shower, this smart invitation card maker brings your ideas to life with speed, style, and personalized flair.\nWhen your vision is vivid but your design skills stall, this invitation card maker opens a world of inspired possibilities. No need for fancy software or hours of tweaking—just words, and the magic begins. Your aesthetic meets AI intuition, and suddenly, you're not just planning a party... you're setting the tone for a memory."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore Designs Made With Invitation Card Maker",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}

@@ -1,1 +1,237 @@
-{"id":"00000000-0000-0000-0000-000000008009","name":"birthday-invitation-card-maker","author":"c","title":"AI Birthday Invitation Card Maker","description":"Create fun, stylish invites fast with flexible, theme-driven design.","metadata_title":"Birthday Invitation Card Maker For Free - Instant Custom Invites","metadata_description":"Easily design birthday invites with our free online birthday invitation card maker. Quick setup for all skill levels. Try it free.","playground_type":"chat_model","model_order":8009,"order":8009,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018009","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8009/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of Birthday Invitation Card Maker","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Create Invitations in Minutes, Not Hours","content":"Pressed for time but still want invites that sparkle with personality? The birthday invitation card maker turns your words and ideas into ready-to-share digital designs in just a few clicks. Whether you're planning for kids or grown-ups, this birthday invitation card maker delivers visual variety without the stress of starting from scratch.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Vibrant Designs for Every Party Mood","content":"No more generic invites when you're looking to wow. Whether it's a space-themed bash or a garden picnic, the birthday invitation card maker gives you rich templates and moods to match. With AI-generated visuals and dynamic style options, this birthday invitation card maker helps your celebration stand out with creative flair.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"From Blank Canvas to Bold Ideas","content":"Stuck on a theme or unsure how to begin? Let the birthday invitation card maker guide your imagination. With prompt-powered inspiration and playful aesthetic choices, this birthday invitation card maker fuels your creative spark—turning fuzzy ideas into vibrant designs with charm, wit, and polish.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use a Birthday Invitation Card Maker","item_columns":3,"items":[{"title":"Reflect Your Style","content":"Whether you're throwing a whimsical bash or a sleek soirée, the birthday invitation card maker helps you design invites that mirror your unique vibe—making every guest feel the celebration is truly yours from the first glance."},{"title":"Spark Creative Joy","content":"Let your imagination lead the way as the birthday invitation card maker turns your ideas into playful, personalized designs—no art degree required. Creating becomes part of the celebration itself."},{"title":"Save Time, Stay Personal","content":"Even on your busiest days, the birthday invitation card maker empowers you to craft heartfelt invites in minutes—so you can focus on moments, not logistics, without compromising your personal touch."}]},{"section_type":"title-description-centered-icon-block","title":"Birthday Invitation Card Maker You Can Trust","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use Birthday Invitation Card Maker","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our birthday invitation card tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into birthday invitation card artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to Birthday Invitation Card Maker","introduction":"The birthday invitation card maker is your fast track to beautifully designed digital invites—no design skills required. Ideal for busy parents, party planners, or anyone celebrating with style, this intuitive generator creates personalized, prompt-driven visuals to match your birthday vibe, big or small.\nWhen you're crunched for time but still want invitations that feel joyful and thoughtful, the birthday invitation card maker offers speed and delight in equal measure. It sparks inspiration, bypasses blank-page panic, and brings themed dreams to life in vivid, share-worthy formats—because birthdays shouldn't feel basic."},{"section_type":"explore","title":"Explore Birthday Invitation Card Maker Designs","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008009",
+    "name": "birthday-invitation-card-maker",
+    "author": "c",
+    "title": "AI Birthday Invitation Card Maker",
+    "description": "Create fun, stylish invites fast with flexible, theme-driven design.",
+    "metadata_title": "Birthday Invitation Card Maker For Free - Instant Custom Invites",
+    "metadata_description": "Easily design birthday invites with our free online birthday invitation card maker. Quick setup for all skill levels. Try it free.",
+    "playground_type": "chat_model",
+    "model_order": 8009,
+    "order": 8009,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018009",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": {
+                    "enhancer": "DefaultTemplateEnhancer",
+                    "enhancer_config": {
+                        "template": "${prompt}"
+                    }
+                }
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8009/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of Birthday Invitation Card Maker",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Create Invitations in Minutes, Not Hours",
+                        "content": "Pressed for time but still want invites that sparkle with personality? The birthday invitation card maker turns your words and ideas into ready-to-share digital designs in just a few clicks. Whether you're planning for kids or grown-ups, this birthday invitation card maker delivers visual variety without the stress of starting from scratch.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Vibrant Designs for Every Party Mood",
+                        "content": "No more generic invites when you're looking to wow. Whether it's a space-themed bash or a garden picnic, the birthday invitation card maker gives you rich templates and moods to match. With AI-generated visuals and dynamic style options, this birthday invitation card maker helps your celebration stand out with creative flair.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "From Blank Canvas to Bold Ideas",
+                        "content": "Stuck on a theme or unsure how to begin? Let the birthday invitation card maker guide your imagination. With prompt-powered inspiration and playful aesthetic choices, this birthday invitation card maker fuels your creative spark—turning fuzzy ideas into vibrant designs with charm, wit, and polish.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use a Birthday Invitation Card Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Reflect Your Style",
+                        "content": "Whether you're throwing a whimsical bash or a sleek soirée, the birthday invitation card maker helps you design invites that mirror your unique vibe—making every guest feel the celebration is truly yours from the first glance."
+                    },
+                    {
+                        "title": "Spark Creative Joy",
+                        "content": "Let your imagination lead the way as the birthday invitation card maker turns your ideas into playful, personalized designs—no art degree required. Creating becomes part of the celebration itself."
+                    },
+                    {
+                        "title": "Save Time, Stay Personal",
+                        "content": "Even on your busiest days, the birthday invitation card maker empowers you to craft heartfelt invites in minutes—so you can focus on moments, not logistics, without compromising your personal touch."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "Birthday Invitation Card Maker You Can Trust",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use Birthday Invitation Card Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our birthday invitation card tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into birthday invitation card artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to Birthday Invitation Card Maker",
+                "introduction": "The birthday invitation card maker is your fast track to beautifully designed digital invites—no design skills required. Ideal for busy parents, party planners, or anyone celebrating with style, this intuitive generator creates personalized, prompt-driven visuals to match your birthday vibe, big or small.\nWhen you're crunched for time but still want invitations that feel joyful and thoughtful, the birthday invitation card maker offers speed and delight in equal measure. It sparks inspiration, bypasses blank-page panic, and brings themed dreams to life in vivid, share-worthy formats—because birthdays shouldn't feel basic."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore Birthday Invitation Card Maker Designs",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}
