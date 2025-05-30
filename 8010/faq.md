@@ -1,7 +1,7 @@
 Q:
 What is an AI poster generator and what does this one do?
 A:
-An AI poster generator like this one creates visual posters based on your ideas. You can enter a text prompt or pair it with up to 3 images, and the generator brings your concept to life automatically. It’s designed for anyone—no design experience needed—and the whole process happens online, so you don’t have to install anything.
+An AI poster generator like this one creates visual posters based on your ideas. You can enter a text prompt or pair it with up to 3 images, and the generator brings your concept to life automatically. It's designed for anyone—no design experience needed—and the whole process happens online, so you don't have to install anything.
 ===
 Q:
 Is the AI poster generator free to use?
@@ -16,12 +16,12 @@ To use the AI poster generator, just open the site—no setup needed. First, ent
 Q:
 Can I use the AI poster generator on my phone or tablet?
 A:
-Yes, the AI poster generator works smoothly on phones and tablets. Since everything happens online, there’s no app to install. Just visit the site on your device’s browser and start generating posters wherever you are.
+Yes, the AI poster generator works smoothly on phones and tablets. Since everything happens online, there's no app to install. Just visit the site on your device's browser and start generating posters wherever you are.
 ===
 Q:
 Why use this AI poster generator instead of designing manually or using another tool?
 A:
-The AI poster generator is ideal for quickly turning ideas into visuals without needing design skills. Unlike manual design or other platforms that require layout knowledge or subscriptions, this generator is fast, free to try, and fun to use with just a prompt or image. It’s perfect for sparking creativity without hassle.
+The AI poster generator is ideal for quickly turning ideas into visuals without needing design skills. Unlike manual design or other platforms that require layout knowledge or subscriptions, this generator is fast, free to try, and fun to use with just a prompt or image. It's perfect for sparking creativity without hassle.
 ===
 Q:
 How is this AI poster generator different from tools like Midjourney?
@@ -36,7 +36,7 @@ For the best results with the AI poster generator, describe the mood, style, sub
 Q:
 Do I need an account to use the AI poster generator?
 A:
-No, you don’t need an account to get started. The AI poster generator gives everyone 5 free generations per day. If you want more, you can choose to upgrade with credits, but trying it out doesn’t require signing in or creating an account.
+No, you don't need an account to get started. The AI poster generator gives everyone 5 free generations per day. If you'd like to generate more posters, simply sign in and add credits to continue creating.
 ===
 Q:
 What if the AI poster generator makes something unexpected or I have feedback?

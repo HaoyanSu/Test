@@ -1,1 +1,237 @@
-{"id":"00000000-0000-0000-0000-000000008008","name":"event-poster-generator","author":"c","title":"AI Event Poster Generator","description":"Craft bold visuals in minutes from text or images with fast edits","metadata_title":"Free Event Poster Generator - Create Stunning Visuals Fast","metadata_description":"Create event posters quickly with our online tool. Customize design, add details, and download instantly. Generate now!","playground_type":"chat_model","model_order":8008,"order":8008,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018008","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8008/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of AI Event Poster Generator","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Create Stunning Posters in Minutes","content":"When time is tight and your audience is waiting, the event poster generator delivers rapid results. Simply describe your event and let it produce polished visuals that resonate. With lightning-fast rendering and zero setup delays, you can generate a bold event poster on your lunch break—and tweak it again before the doors open.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Style Matching by Mood and Theme","content":"Got a feeling but not a visual? Whether you're going for dreamy disco or brutalist tech-night, this event poster generator decodes the mood and transforms it into layered, atmospheric art. Expressive styling means your event poster not only informs—but intrigues. Confusion melts. Vibe achieved.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Visual Power Without Design Skills","content":"Even if you have never touched design software, the AI-generated event poster experience unlocks your creativity. Just feed it a prompt—text, image, or both—and watch complex compositions come to life. Perfect for beginners craving control and professionals needing fast iterations, your event poster becomes your playground, not your puzzle.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use an AI Event Poster Generator","item_columns":3,"items":[{"title":"Express Your Vision","content":"Whether you're launching a community festival or an underground art show, creating your own event poster lets you visually express the soul of your idea and invite others into your world before they even arrive."},{"title":"Save Time, Stay Inspired","content":"When you're juggling logistics and coordination, generating an event poster quickly lets you focus your energy on crafting unforgettable experiences without sacrificing creativity in your promotional materials."},{"title":"Stand Out Effortlessly","content":"In a sea of announcements and flyers, a unique, customized event poster helps your gathering grab attention and reflect the spirit of what makes it special—whether it’s intimate, bold, or wildly unconventional."}]},{"section_type":"title-description-centered-icon-block","title":"The Best Event Poster Generator Available","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use AI Event Poster Generator","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our event poster tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into event poster artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI Event Poster Generator","introduction":"The AI Event Poster Generator empowers creators, organizers, and marketers to turn ideas into striking visual formats—fast. Designed for speed, variety, and effortless expression, this intelligent maker generates digital event posters from simple text prompts or image inputs—no design background required.\nWhether you are launching a music night, a campus meet-up, or a gallery showcase, this event poster generator responds to your vision in minutes. Explore new aesthetics, remix themes, and find your vibe without getting stuck in software menus—a tool tuned to your pace, heartbeat, and headline."},{"section_type":"explore","title":"Explore AI Event Poster Generator Results","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008008",
+    "name": "event-poster-generator",
+    "author": "c",
+    "title": "AI Event Poster Generator",
+    "description": "Craft bold visuals in minutes from text or images with fast edits",
+    "metadata_title": "Free Event Poster Generator - Create Stunning Visuals Fast",
+    "metadata_description": "Create event posters quickly with our online tool. Customize design, add details, and download instantly. Generate now!",
+    "playground_type": "chat_model",
+    "model_order": 8008,
+    "order": 8008,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018008",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": {
+                    "enhancer": "DefaultTemplateEnhancer",
+                    "enhancer_config": {
+                        "template": "${prompt}"
+                    }
+                }
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8008/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of AI Event Poster Generator",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Create Stunning Posters in Minutes",
+                        "content": "When time is tight and your audience is waiting, the event poster generator delivers rapid results. Simply describe your event and let it produce polished visuals that resonate. With lightning-fast rendering and zero setup delays, you can generate a bold event poster on your lunch break—and tweak it again before the doors open.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Style Matching by Mood and Theme",
+                        "content": "Got a feeling but not a visual? Whether you're going for dreamy disco or brutalist tech-night, this event poster generator decodes the mood and transforms it into layered, atmospheric art. Expressive styling means your event poster not only informs—but intrigues. Confusion melts. Vibe achieved.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Visual Power Without Design Skills",
+                        "content": "Even if you have never touched design software, the AI-generated event poster experience unlocks your creativity. Just feed it a prompt—text, image, or both—and watch complex compositions come to life. Perfect for beginners craving control and professionals needing fast iterations, your event poster becomes your playground, not your puzzle.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use an AI Event Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Express Your Vision",
+                        "content": "Whether you're launching a community festival or an underground art show, creating your own event poster lets you visually express the soul of your idea and invite others into your world before they even arrive."
+                    },
+                    {
+                        "title": "Save Time, Stay Inspired",
+                        "content": "When you're juggling logistics and coordination, generating an event poster quickly lets you focus your energy on crafting unforgettable experiences without sacrificing creativity in your promotional materials."
+                    },
+                    {
+                        "title": "Stand Out Effortlessly",
+                        "content": "In a sea of announcements and flyers, a unique, customized event poster helps your gathering grab attention and reflect the spirit of what makes it special—whether it's intimate, bold, or wildly unconventional."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "The Best Event Poster Generator Available",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use AI Event Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our event poster tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into event poster artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI Event Poster Generator",
+                "introduction": "The AI Event Poster Generator empowers creators, organizers, and marketers to turn ideas into striking visual formats—fast. Designed for speed, variety, and effortless expression, this intelligent maker generates digital event posters from simple text prompts or image inputs—no design background required.\nWhether you are launching a music night, a campus meet-up, or a gallery showcase, this event poster generator responds to your vision in minutes. Explore new aesthetics, remix themes, and find your vibe without getting stuck in software menus—a tool tuned to your pace, heartbeat, and headline."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore AI Event Poster Generator Results",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}

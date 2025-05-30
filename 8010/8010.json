@@ -1,1 +1,237 @@
-{"id":"00000000-0000-0000-0000-000000008010","name":"ai-poster-generator","author":"c","title":"AI Poster Generator","description":"Create striking posters fast with text-to-graphic control tools.","metadata_title":"AI Poster Generator for Free - Fast Visuals from Text","metadata_description":"Create unique posters with our AI poster generator. Customize elements in minutes. Perfect for any skill level. Generate now.","playground_type":"chat_model","model_order":8010,"order":8010,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018010","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8010/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of AI Poster Generator","items":[{"item_type":"use-case-text-on-right-multi-video","title":"No Design Skills? No Problem","content":"When you need a professional-looking poster fast but lack the design know-how, the ai poster generator steps in. Just describe what you need, and it delivers polished visuals instantly—no layout anxiety required. With the ai poster generator's smart prompt recognition, your words become eye-catching assets that look anything but generic.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Style That Speaks You","content":"If every other tool keeps pushing the same tired templates, this ai poster generator is your aesthetic escape hatch. With prompts that follow your tone and vibe, it generates visuals that feel personally yours. From bold minimalism to retro pop, the ai poster generator transforms text into posters true to your creative identity, not someone else’s vision.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Visual Iteration, Unleashed","content":"Brainstorming five poster ideas to pitch? The ai poster generator lets you explore your concepts at lightning speed. Fuel your flow with AI-generated variations that adapt your prompts in surprising ways. Creative iteration meets keyword-rich output—because the ai poster generator isn't just a tool, it's your agile visual thought partner.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use an AI Poster Generator","item_columns":3,"items":[{"title":"Express Your Vision","content":"Channel your unique ideas into visuals that truly represent you. With an ai poster generator, you can craft designs that reflect your identity, style, and purpose—perfect for events, causes, or your personal brand."},{"title":"Create with Ease","content":"Whether you're racing a deadline or exploring a new idea, the ai poster generator helps you produce polished, personalized posters quickly—no design experience needed, just your imagination leading the way."},{"title":"Ignite New Ideas","content":"Let inspiration strike in unexpected ways. The ai poster generator sparks creativity by offering fresh layouts and visuals that help you think beyond the ordinary and bring bold concepts to life."}]},{"section_type":"title-description-centered-icon-block","title":"AI Poster Generator That Delivers Fast Results","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use AI Poster Generator","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our poster tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into poster artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI Poster Generator","introduction":"The AI Poster Generator is a fast, intuitive visual creation tool built for anyone seeking beautiful poster designs without the design degree. Whether you're a small business owner, artist, or content creator, this generator helps you turn simple text prompts into polished poster-ready visuals in seconds. \nWith the ai poster generator, you can explore unexpected styles, remix ideas without limits, and breathe life into your messages. Designed for creative freedom, this ai poster generator helps you move from concept to wow without the stress of blank canvases or clunky templates. Because sometimes, imagination just needs a spark."},{"section_type":"explore","title":"Explore Results With AI Poster Generator","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008010",
+    "name": "ai-poster-generator",
+    "author": "c",
+    "title": "AI Poster Generator",
+    "description": "Create striking posters fast with text-to-graphic control tools.",
+    "metadata_title": "AI Poster Generator for Free - Fast Visuals from Text",
+    "metadata_description": "Create unique posters with our AI poster generator. Customize elements in minutes. Perfect for any skill level. Generate now.",
+    "playground_type": "chat_model",
+    "model_order": 8010,
+    "order": 8010,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018010",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": {
+                    "enhancer": "DefaultTemplateEnhancer",
+                    "enhancer_config": {
+                        "template": "${prompt}"
+                    }
+                }
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8010/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of AI Poster Generator",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "No Design Skills? No Problem",
+                        "content": "When you need a professional-looking poster fast but lack the design know-how, the ai poster generator steps in. Just describe what you need, and it delivers polished visuals instantly—no layout anxiety required. With the ai poster generator's smart prompt recognition, your words become eye-catching assets that look anything but generic.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Style That Speaks You",
+                        "content": "If every other tool keeps pushing the same tired templates, this ai poster generator is your aesthetic escape hatch. With prompts that follow your tone and vibe, it generates visuals that feel personally yours. From bold minimalism to retro pop, the ai poster generator transforms text into posters true to your creative identity, not someone else's vision.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Visual Iteration, Unleashed",
+                        "content": "Brainstorming five poster ideas to pitch? The ai poster generator lets you explore your concepts at lightning speed. Fuel your flow with AI-generated variations that adapt your prompts in surprising ways. Creative iteration meets keyword-rich output—because the ai poster generator isn't just a tool, it's your agile visual thought partner.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use an AI Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Express Your Vision",
+                        "content": "Channel your unique ideas into visuals that truly represent you. With an ai poster generator, you can craft designs that reflect your identity, style, and purpose—perfect for events, causes, or your personal brand."
+                    },
+                    {
+                        "title": "Create with Ease",
+                        "content": "Whether you're racing a deadline or exploring a new idea, the ai poster generator helps you produce polished, personalized posters quickly—no design experience needed, just your imagination leading the way."
+                    },
+                    {
+                        "title": "Ignite New Ideas",
+                        "content": "Let inspiration strike in unexpected ways. The ai poster generator sparks creativity by offering fresh layouts and visuals that help you think beyond the ordinary and bring bold concepts to life."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "AI Poster Generator That Delivers Fast Results",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use AI Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our poster tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into poster artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI Poster Generator",
+                "introduction": "The AI Poster Generator is a fast, intuitive visual creation tool built for anyone seeking beautiful poster designs without the design degree. Whether you're a small business owner, artist, or content creator, this generator helps you turn simple text prompts into polished poster-ready visuals in seconds. \nWith the ai poster generator, you can explore unexpected styles, remix ideas without limits, and breathe life into your messages. Designed for creative freedom, this ai poster generator helps you move from concept to wow without the stress of blank canvases or clunky templates. Because sometimes, imagination just needs a spark."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore Results With AI Poster Generator",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}

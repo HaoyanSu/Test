@@ -6,12 +6,12 @@ The event poster generator is an AI-powered creative tool that transforms your t
 Q:
 Is the event poster generator free to use?
 A:
-Yes, all users can try the event poster generator for free. You get five AI-generated posters per day without needing to log in. If you’d like to create more, you can sign in and add credits to unlock additional generations.
+Yes, all users can try the event poster generator for free. You get five AI-generated posters per day without needing to log in. If you'd like to create more, you can sign in and add credits to unlock additional generations.
 ===
 Q:
 Do I need an account to use the event poster generator?
 A:
-No, you can use the event poster generator without creating an account. We offer five free generations daily for all users. However, if you want more than five, you’ll need to sign in and purchase additional generation credits.
+No, you can use the event poster generator without creating an account. We offer five free generations daily for all users. However, if you want more than five, you'll need to sign in and purchase additional generation credits.
 ===
 Q:
 Can I use the event poster generator on my phone or tablet?
@@ -39,11 +39,11 @@ A:
 Yes, the event poster generator lets you pair a text description with up to three uploaded images to guide the design. This helps the AI better understand your vibe and delivers a more tailored result.
 ===
 Q:
-What happens if I’m not happy with my event poster result?
+What happens if I'm not happy with my event poster result?
 A:
-If your event poster doesn’t turn out how you imagined, feel free to adjust your prompt or try new image combinations. Feedback is always welcome—just email us at hi@runcomfy.com. Your input helps improve our generator.
+If your event poster doesn't turn out how you imagined, feel free to adjust your prompt or try new image combinations. Feedback is always welcome—just email us at hi@runcomfy.com. Your input helps improve our generator.
 ===
 Q:
 Is it weird that an AI knows how I want my event poster to look?
 A:
-Not at all! That’s the magic of prompts—what feels like mind reading is really smart pattern recognition and your creative input. The event poster generator simply turns your words (and vibe) into visuals—like having a design buddy who gets you instantly.
+Not at all! That's the magic of prompts—what feels like mind reading is really smart pattern recognition and your creative input. The event poster generator simply turns your words (and vibe) into visuals—like having a design buddy who gets you instantly.
