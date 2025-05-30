@@ -1,1 +1,263 @@
-{"id":"00000000-0000-0000-0000-000000008013","name":"book-cover-maker","author":"c","title":"AI Book Cover Maker","description":"Custom covers with mood, style, and story-aligned visuals fast","metadata_title":"Free Book Cover Maker - Design Unique Covers Fast","metadata_description":"Create professional book covers instantly with our book cover maker. Simply input details and design your cover in minutes. Try it free.","playground_type":"chat_model","model_order":8013,"order":8013,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018013","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8013/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of AI Book Cover Maker","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Visualize Your Story in One Prompt","content":"Not every writer is also a designer—but every book deserves a thoughtful first impression. With this AI book cover maker, you can describe your plot, tone, or visual vibe in just a sentence and receive cover concepts that fit. This book cover maker transforms tricky ideas into bold visual storytelling without hours of design tinkering.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Rapid Drafting with Creative Flexibility","content":"You're juggling chapters, edits, maybe even your day job—you need cover drafts that keep up. This book cover maker creates multiple variations from each prompt, helping you experiment with flair and confidence. Whether you're testing titles or tweaking genre hints, the book cover maker keeps your momentum flowing fast.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Designs That Respect Genre Conventions","content":"A good sci-fi cover whispers future tech, just as cozy romance glows with charm. This AI-generated book cover maker understands visual tropes and aligns your cover with reader expectations. The book cover maker nails the unwritten rules—so your book walks onto digital shelves looking like it belongs.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use This AI Book Cover Maker","item_columns":3,"items":[{"title":"Express Your Story","content":"Bring your unique narrative into visual form by using a book cover maker that aligns perfectly with your voice, letting readers sense your story before reading a single word."},{"title":"Fuel Creative Freedom","content":"Whether you're an indie author or a passionate storyteller, a book cover maker gives you the freedom to explore styles, colors, and themes that reflect your creative vision without limitation."},{"title":"Save Time, Stay Inspired","content":"When deadlines are tight but your imagination is thriving, a book cover maker helps you create polished, publication-ready covers quickly, so you can focus on writing your next great chapter."}]},{"section_type":"title-description-centered-icon-block","title":"The Best Book Cover Maker Online","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use AI Book Cover Maker","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our book cover tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into book cover artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI Book Cover Maker","introduction":"The AI-powered book cover maker helps authors, publishers, and storytellers visually bring their books to life through beautifully rendered, customizable covers. Whether you're launching your first indie novel or rebranding a self-help guide, this intuitive generator produces on-theme, idea-ready assets in minutes—no design experience needed.\n\nA well-told story deserves a cover that speaks its language. This book cover maker lets you explore your book's identity through color, style, and suggestion—quickly, affordably, and with a spark of surprise. From dark academia to techno-fantasy, it captures a mood before your reader even opens the first page."},{"section_type":"explore","title":"Explore AI Book Cover Maker Results","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008013",
+    "name": "book-cover-maker",
+    "author": "c",
+    "title": "AI Book Cover Maker",
+    "description": "Custom covers with mood, style, and story-aligned visuals fast",
+    "metadata_title": "Free Book Cover Maker - Design Unique Covers Fast",
+    "metadata_description": "Create professional book covers instantly with our book cover maker. Simply input details and design your cover in minutes. Try it free.",
+    "playground_type": "chat_model",
+    "model_order": 8013,
+    "order": 8013,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018013",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": [
+                    {
+                        "enhancer": "OpenAIPromptEnhancer",
+                        "enhancer_config": {
+                            "model": "gpt-4o",
+                            "preset_messages": [],
+                            "user_message_template": "#Task\nTransform this Initial Prompt into a book cover image generation prompt.\nWhen you rewrite the prompt, please reference the prompt template below.\n\n#Initial Prompt\n${prompt}\n\n#Prompt Template\nCreate a visually striking 2:3 aspect-ratio book cover design featuring [MAIN SUBJECT or THEME] set against a [describe background or scene] in a [art style] style. Convey a [mood/tone] atmosphere (e.g., dark and mysterious or bright and whimsical) with a harmonious [color palette] scheme that highlights the subject. Place a clear focal point (such as [key element]) in the composition, using [lighting/shading] for depth and contrast. Integrate bold, [typography style] text (title/author) in a way that complements the imagery without overpowering it. Optionally add subtle texture (paper grain, brush stroke, foil effect, etc.) or a light special effect (glow, blur, overlay) for visual interest. The cover should hint at the story’s emotion or narrative. Generate a clean, flat design without mockup elements and backgrounds.\n\n#Output  \nPlease directly output the final prompt string:"
+                        },
+                        "fallback_enhancer": "DefaultTemplateEnhancer",
+                        "fallback_enhancer_config": {
+                            "template": "book cover Design: ${prompt}\nThe output should be an image of book cover"
+                        },
+                        "use_when": {
+                            "input_images": {
+                                "$exists": false,
+                                "$eq": []
+                            }
+                        }
+                    },
+                    {
+                        "enhancer": "DefaultTemplateEnhancer",
+                        "enhancer_config": {
+                            "template": "Please apply all modifications to the **first uploaded image only**.  \nAny additional images I upload are for **reference purposes only** (e.g., style, objects, or colors), and should not be directly edited or replaced.  \nUnless otherwise specified, assume that every instruction I give is intended to **modify the first image**.\n\nInstruction: ${prompt}"
+                        },
+                        "use_when": {
+                            "input_images": {
+                                "$exists": true,
+                                "$ne": []
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8013/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of AI Book Cover Maker",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Visualize Your Story in One Prompt",
+                        "content": "Not every writer is also a designer—but every book deserves a thoughtful first impression. With this AI book cover maker, you can describe your plot, tone, or visual vibe in just a sentence and receive cover concepts that fit. This book cover maker transforms tricky ideas into bold visual storytelling without hours of design tinkering.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Rapid Drafting with Creative Flexibility",
+                        "content": "You're juggling chapters, edits, maybe even your day job—you need cover drafts that keep up. This book cover maker creates multiple variations from each prompt, helping you experiment with flair and confidence. Whether you're testing titles or tweaking genre hints, the book cover maker keeps your momentum flowing fast.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Designs That Respect Genre Conventions",
+                        "content": "A good sci-fi cover whispers future tech, just as cozy romance glows with charm. This AI-generated book cover maker understands visual tropes and aligns your cover with reader expectations. The book cover maker nails the unwritten rules—so your book walks onto digital shelves looking like it belongs.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use This AI Book Cover Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Express Your Story",
+                        "content": "Bring your unique narrative into visual form by using a book cover maker that aligns perfectly with your voice, letting readers sense your story before reading a single word."
+                    },
+                    {
+                        "title": "Fuel Creative Freedom",
+                        "content": "Whether you're an indie author or a passionate storyteller, a book cover maker gives you the freedom to explore styles, colors, and themes that reflect your creative vision without limitation."
+                    },
+                    {
+                        "title": "Save Time, Stay Inspired",
+                        "content": "When deadlines are tight but your imagination is thriving, a book cover maker helps you create polished, publication-ready covers quickly, so you can focus on writing your next great chapter."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "The Best Book Cover Maker Online",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use AI Book Cover Maker",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our book cover tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into book cover artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI Book Cover Maker",
+                "introduction": "The AI-powered book cover maker helps authors, publishers, and storytellers visually bring their books to life through beautifully rendered, customizable covers. Whether you're launching your first indie novel or rebranding a self-help guide, this intuitive generator produces on-theme, idea-ready assets in minutes—no design experience needed.\n\nA well-told story deserves a cover that speaks its language. This book cover maker lets you explore your book's identity through color, style, and suggestion—quickly, affordably, and with a spark of surprise. From dark academia to techno-fantasy, it captures a mood before your reader even opens the first page."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore AI Book Cover Maker Results",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}

@@ -1,1 +1,263 @@
-{"id":"00000000-0000-0000-0000-000000008011","name":"infographic-poster-generator","author":"c","title":"AI Infographic Poster Generator","description":"Quickly turn ideas into striking visuals with text-to-design AI","metadata_title":"Infographic Poster Generator For Free - AI Visual Creator","metadata_description":"Create infographic posters quickly with our online tool. Easily accessible for all skill levels. Start designing your poster now.","playground_type":"chat_model","model_order":8011,"order":8011,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018011","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8011/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of AI Infographic Poster Generator","items":[{"item_type":"use-case-text-on-right-multi-video","title":"From Prompt to Infographic Poster in Seconds","content":"Under pressure to deliver a stunning infographic poster fast? Just describe what you need—this generator visualizes your message instantly. Skip the struggle with layout tools and spend more time fine-tuning your ideas. Generate your infographic poster in seconds, friction-free and with style that sparks attention.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Unblock Your Creative Flow, Automatically","content":"Starting from scratch can stall even the best ideas. Our AI-generated design tool gives your infographic poster a creative burst, offering fresh layout options and aesthetic directions. Whether you're exploring data stories or visual metaphors, your next infographic poster begins with inspiration, not hesitation.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Make Complex Information Beautifully Digestible","content":"You have compelling insights or tricky data—our infographic poster generator helps turn those into clear, visual narratives. Instead of drowning in complexity, guide your viewer with visuals that translate nuance into impact. Because a powerful infographic poster makes brains light up, not glaze over.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use an AI Infographic Poster Generator","item_columns":3,"items":[{"title":"Express Your Vision","content":"Bring your unique perspective to life by designing an infographic poster that speaks directly to your audience—whether it’s for a school project, a passion cause, or your personal brand."},{"title":"Simplify Complex Ideas","content":"Transform data or dense information into a clear, visual narrative by creating an infographic poster that organizes your thoughts in a way people instantly understand and remember."},{"title":"Create in Minutes","content":"When inspiration strikes, you don’t want to be held back—quickly generate an infographic poster that looks polished and purposeful without spending hours learning design software."}]},{"section_type":"title-description-centered-icon-block","title":"Infographic Posters Made Easy and Free","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use the Infographic Poster Generator","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our infographic poster tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into infographic poster artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI Infographic Poster Generator","introduction":"The infographic poster generation tool is your shortcut to visual storytelling—designed for marketers, educators, content creators, and anyone seeking faster ways to transform ideas into bold, professional infographic posters. Using simple text prompts, it generates ready-to-use visuals in a range of styles, no design degree required.\nWhen your deadline is breathing down your neck or that blank canvas starts to look like a wall, this AI-powered poster maker lights the way forward. Whether you’re teaching with clarity or pitching with impact, the infographic poster becomes not a task, but a breakthrough moment—bold, swift, and uniquely yours."},{"section_type":"explore","title":"Explore AI Infographic Poster Results","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008011",
+    "name": "infographic-poster-generator",
+    "author": "c",
+    "title": "AI Infographic Poster Generator",
+    "description": "Quickly turn ideas into striking visuals with text-to-design AI",
+    "metadata_title": "Infographic Poster Generator For Free - AI Visual Creator",
+    "metadata_description": "Create infographic posters quickly with our online tool. Easily accessible for all skill levels. Start designing your poster now.",
+    "playground_type": "chat_model",
+    "model_order": 8011,
+    "order": 8011,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018011",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": [
+                    {
+                        "enhancer": "OpenAIPromptEnhancer",
+                        "enhancer_config": {
+                            "model": "gpt-4o",
+                            "preset_messages": [],
+                            "user_message_template": "#Task\nTransform this Initial Prompt into a infographic poster image generation prompt.\nWhen you rewrite the prompt, please reference the prompt template below.\n\n#Initial Prompt\n${prompt}\n\n#Prompt Template\nCreate a {1:1, 2:3, or 3:2 aspect-ratio} infographic poster design about {subject}.  Use a {style} design (e.g. modern flat design or hand-drawn illustrative style) with a clear hierarchy and logical flow.  Include icons, charts or timelines to convey information, organized in labeled sections or steps.  Choose a cohesive color scheme (e.g. bold/vibrant for marketing, calm pastels for educational) and maintain high contrast between text and background.  Typography should be large and legible (distinct fonts for headings vs. body text) with minimal supporting copy.  Add visual interest with contemporary effects (e.g. subtle textures, gradients, or soft shadows) and a consistent graphic style.  The overall mood should match the theme (e.g. professional, playful, inspirational). Generate a clean, flat design without mockup elements and backgrounds.\n\n#Output  \nPlease directly output the final prompt string:"
+                        },
+                        "fallback_enhancer": "DefaultTemplateEnhancer",
+                        "fallback_enhancer_config": {
+                            "template": "infographic poster Design: ${prompt}\nThe output should be an image of infographic poster"
+                        },
+                        "use_when": {
+                            "input_images": {
+                                "$exists": false,
+                                "$eq": []
+                            }
+                        }
+                    },
+                    {
+                        "enhancer": "DefaultTemplateEnhancer",
+                        "enhancer_config": {
+                            "template": "Please apply all modifications to the **first uploaded image only**.  \nAny additional images I upload are for **reference purposes only** (e.g., style, objects, or colors), and should not be directly edited or replaced.  \nUnless otherwise specified, assume that every instruction I give is intended to **modify the first image**.\n\nInstruction: ${prompt}"
+                        },
+                        "use_when": {
+                            "input_images": {
+                                "$exists": true,
+                                "$ne": []
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8011/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of AI Infographic Poster Generator",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "From Prompt to Infographic Poster in Seconds",
+                        "content": "Under pressure to deliver a stunning infographic poster fast? Just describe what you need—this generator visualizes your message instantly. Skip the struggle with layout tools and spend more time fine-tuning your ideas. Generate your infographic poster in seconds, friction-free and with style that sparks attention.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Unblock Your Creative Flow, Automatically",
+                        "content": "Starting from scratch can stall even the best ideas. Our AI-generated design tool gives your infographic poster a creative burst, offering fresh layout options and aesthetic directions. Whether you're exploring data stories or visual metaphors, your next infographic poster begins with inspiration, not hesitation.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Make Complex Information Beautifully Digestible",
+                        "content": "You have compelling insights or tricky data—our infographic poster generator helps turn those into clear, visual narratives. Instead of drowning in complexity, guide your viewer with visuals that translate nuance into impact. Because a powerful infographic poster makes brains light up, not glaze over.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use an AI Infographic Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Express Your Vision",
+                        "content": "Bring your unique perspective to life by designing an infographic poster that speaks directly to your audience—whether it's for a school project, a passion cause, or your personal brand."
+                    },
+                    {
+                        "title": "Simplify Complex Ideas",
+                        "content": "Transform data or dense information into a clear, visual narrative by creating an infographic poster that organizes your thoughts in a way people instantly understand and remember."
+                    },
+                    {
+                        "title": "Create in Minutes",
+                        "content": "When inspiration strikes, you don't want to be held back—quickly generate an infographic poster that looks polished and purposeful without spending hours learning design software."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "Infographic Posters Made Easy and Free",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use the Infographic Poster Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our infographic poster tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into infographic poster artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI Infographic Poster Generator",
+                "introduction": "The infographic poster generation tool is your shortcut to visual storytelling—designed for marketers, educators, content creators, and anyone seeking faster ways to transform ideas into bold, professional infographic posters. Using simple text prompts, it generates ready-to-use visuals in a range of styles, no design degree required.\nWhen your deadline is breathing down your neck or that blank canvas starts to look like a wall, this AI-powered poster maker lights the way forward. Whether you're teaching with clarity or pitching with impact, the infographic poster becomes not a task, but a breakthrough moment—bold, swift, and uniquely yours."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore AI Infographic Poster Results",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}

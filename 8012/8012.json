@@ -1,1 +1,263 @@
-{"id":"00000000-0000-0000-0000-000000008012","name":"ai-youtube-thumbnail-generator","author":"c","title":"AI YouTube Thumbnail Generator","description":"Generate bold, scroll-stopping thumbnails with flexible AI tools","metadata_title":"Free AI YouTube Thumbnail Generator for Eye-Catching Content","metadata_description":"AI YouTube Thumbnail Generator: Quickly create custom thumbnails with ease for any skill level. Allows direct editing and uploading. Try it free!","playground_type":"chat_model","model_order":8012,"order":8012,"required_credits":24,"credits_remarks":"Generating an image requires 24 credits.","features":["Multimodal"],"tags":["By Function/TEMPLATES/Generator"],"task_templates":[{"id":"00000000-0000-0000-0000-000000018012","author":"runcomfy","name":"Image to Image","required_credits":24,"credits_remarks":"","supported_batch_size":[1],"openapi":{"components":{"schemas":{"Input":{"properties":{"image":{"title":"Image Prompt","description":"Make sure your image is under 25MB in size.","type":"array","format":"image_uris","items":{"type":"string","format":"image_uri"},"maxItems":3,"x-rc-group-id":"","x-order":2,"validations":[{"validation_rule":"file_size_mb<","validation_value":25,"validation_error":"File size must be less than 16 MB."}]},"prompt":{"title":"Prompt","description":"","type":"string","format":"str","default":"","x-rc-group-id":"text_positive_prompt","x-order":0},"size":{"title":"Aspect Ratio (W:H)","description":"","type":"string","format":"str_with_choice","enum":["3:2","1:1","2:3"],"default":"1:1","x-rc-group-id":"","x-order":4}},"required":["prompt"],"title":"Input","type":"object"},"Output":{"properties":{"image":{"title":"Image","type":"string","format":"uri"}},"title":"Output","type":"object"}}},"info":{"title":"Runcomfy","version":"0.1.0"},"openapi":"3.0.2"},"providers":[],"enhancers":{"prompt":{"enhancer":"DefaultTemplateEnhancer","enhancer_config":{"template":"${prompt}"}}}}],"task_template_presets":[[{"output":{"image":"https://playgrounds-storage-public.runcomfy.net/tools/8012/media-files/promo.webp"}}],[{"section_type":"use-cases","title":"Features of AI YouTube Thumbnail Generator","items":[{"item_type":"use-case-text-on-right-multi-video","title":"Stand Out Instantly With Scroll-Stopping Visuals","content":"In a sea of thumbnails, first impressions win. The ai youtube thumbnail generator helps you create bold images that break patterns and demand attention. With styles that range from cinematic to playful, this ai youtube thumbnail generator gives you visuals that pop in any feed—boosting visibility and elevating your channel's first look.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-left-multi-video","title":"Jumpstart Creativity—Even When You Feel Stuck","content":"When ideas run dry, a creative nudge means everything. The ai youtube thumbnail generator takes your prompt—or even your vibe—and spins it into visual inspiration within seconds. It is your rapid-fire moodboard, instantly suggesting AI-generated concepts that unblock your direction and lift you out of thumbnail limbo.","cta-title":"Try it now","media":[]},{"item_type":"use-case-text-on-right-multi-video","title":"Know What Clicks—Explore Concepts Instantly","content":"If you are unsure what drives clicks—bold text, dramatic faces, or subtle composition—the ai youtube thumbnail generator lets you test visual ideas instantly. Generate multiple styles side by side with this ai youtube thumbnail generator and make decisions based on insight, not guesswork. Style tweaks, title swaps, visual trails—it is all at your fingertips.","cta-title":"Try it now","media":[]}]},{"section_type":"title-description-block","title":"Why Use an AI YouTube Thumbnail Generator","item_columns":3,"items":[{"title":"Stand Out Instantly","content":"When you’re competing for attention on YouTube, first impressions matter. An ai youtube thumbnail generator helps you craft bold, personalized visuals that reflect your unique voice and hook viewers before they even hit play."},{"title":"Unlock Creative Flow","content":"Whether you're on your tenth upload or your hundredth, the ai youtube thumbnail generator can spark new visual ideas, helping you experiment with colors, text, and layout without stalling your momentum or overthinking your design."},{"title":"Save Time, Stay You","content":"Between filming, editing, and publishing, you’ve got enough on your plate. The ai youtube thumbnail generator quickly translates your content style into captivating thumbnails—so you can stay consistent without creative burnout."}]},{"section_type":"title-description-centered-icon-block","title":"AI YouTube Thumbnail Generator You Can Trust","item_columns":3,"items":[{"title":"Free to use","content":"Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"},{"title":"Fully Private","content":"Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"},{"title":"Easy to Start","content":"Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.","icon_url":"https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"}]},{"section_type":"how-to-use","title":"How to Use AI YouTube Thumbnail Generator","item_columns":3,"items":[{"section_title":"Step1","title":"Open the generator","content":"Click our youtube thumbnail tool. You don't need to download or install anything on your device."},{"section_title":"Step2","title":"Add prompt or image","content":"Describe or upload the image your want to turn into youtube thumbnail artwork from your device or your Gallery."},{"section_title":"Step3","title":"Wait","content":"The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."}]},{"section_type":"curated-examples","title":"","items":[]},{"section_type":"introduction","title":"Introduction to AI YouTube Thumbnail Generator","introduction":"The AI YouTube Thumbnail Generator is built for creators who want to stop the scroll. Whether you are launching how-to tutorials, product reviews, or music videos, this generator helps you create attention-grabbing, eye-catching thumbnails in minutes—no design degree needed. Tailor visual concepts with text prompts, explore variations instantly, and elevate click-worthiness effortlessly.\nIn a world where milliseconds decide whether viewers click or scroll, the ai youtube thumbnail generator serves one deep creative goal: turning hesitation into imagination. No more staring at a blank canvas. With every prompt you enter, this ai youtube thumbnail generator answers back with possibility—bold color, cinematic drama, or offbeat charm. Your vision, amplified."},{"section_type":"explore","title":"Explore AI YouTube Thumbnail Generator Results","introduction":"","items":[]},{"section_type":"related-playgrounds","title":"Related Playgrounds","items":[]}]]}
+{
+    "id": "00000000-0000-0000-0000-000000008012",
+    "name": "ai-youtube-thumbnail-generator",
+    "author": "c",
+    "title": "AI YouTube Thumbnail Generator",
+    "description": "Generate bold, scroll-stopping thumbnails with flexible AI tools",
+    "metadata_title": "Free AI YouTube Thumbnail Generator for Eye-Catching Content",
+    "metadata_description": "AI YouTube Thumbnail Generator: Quickly create custom thumbnails with ease for any skill level. Allows editing and uploading. Try it free!",
+    "playground_type": "chat_model",
+    "model_order": 8012,
+    "order": 8012,
+    "required_credits": 24,
+    "credits_remarks": "Generating an image requires 24 credits.",
+    "features": [
+        "Multimodal"
+    ],
+    "tags": [
+        "By Function/TEMPLATES/Generator"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000018012",
+            "author": "runcomfy",
+            "name": "Image to Image",
+            "required_credits": 24,
+            "credits_remarks": "",
+            "supported_batch_size": [
+                1
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image Prompt",
+                                    "description": "Make sure your image is under 25MB in size.",
+                                    "type": "array",
+                                    "format": "image_uris",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "image_uri"
+                                    },
+                                    "maxItems": 3,
+                                    "x-rc-group-id": "",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 25,
+                                            "validation_error": "File size must be less than 16 MB."
+                                        }
+                                    ]
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "default": "",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "size": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "3:2",
+                                        "1:1",
+                                        "2:3"
+                                    ],
+                                    "default": "1:1",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                },
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "openapi": "3.0.2"
+            },
+            "providers": [],
+            "enhancers": {
+                "prompt": [
+                    {
+                        "enhancer": "OpenAIPromptEnhancer",
+                        "enhancer_config": {
+                            "model": "gpt-4o",
+                            "preset_messages": [],
+                            "user_message_template": "#Task\nTransform this Initial Prompt into a youtube thumbnail image generation prompt.\nWhen you rewrite the prompt, please reference the prompt template below.\n\n#Initial Prompt\n${prompt}\n\n#Prompt Template\nA trending 3:2 YouTube thumbnail featuring {subject or theme} in a {adjective} {setting or environment} style, capturing a {emotion or action} mood. The {subject/object} should be prominently placed in the frame with dynamic lighting (for example, a spotlight or neon glow) to add depth. Use a bold, high-contrast text overlay (e.g. a short title like “{Your Text Here}”) in a clear modern font at the top or bottom. The background should use a vivid color palette or gradient (such as {colors}) that complements the subject and stands out against YouTube's UI. Optionally include a small graphic icon or emoji related to the content. Ensure the overall composition is balanced with clear focal points and clean space for readability. Generate a clean, flat design without mockup elements and backgrounds.\n\n#Output  \nPlease directly output the final prompt string:"
+                        },
+                        "fallback_enhancer": "DefaultTemplateEnhancer",
+                        "fallback_enhancer_config": {
+                            "template": "youtube thumbnail Design: ${prompt}\nThe output should be an image of youtube thumbnail"
+                        },
+                        "use_when": {
+                            "input_images": {
+                                "$exists": false,
+                                "$eq": []
+                            }
+                        }
+                    },
+                    {
+                        "enhancer": "DefaultTemplateEnhancer",
+                        "enhancer_config": {
+                            "template": "Please apply all modifications to the **first uploaded image only**.  \nAny additional images I upload are for **reference purposes only** (e.g., style, objects, or colors), and should not be directly edited or replaced.  \nUnless otherwise specified, assume that every instruction I give is intended to **modify the first image**.\n\nInstruction: ${prompt}"
+                        },
+                        "use_when": {
+                            "input_images": {
+                                "$exists": true,
+                                "$ne": []
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/8012/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "use-cases",
+                "title": "Features of AI YouTube Thumbnail Generator",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Stand Out Instantly With Scroll-Stopping Visuals",
+                        "content": "In a sea of thumbnails, first impressions win. The ai youtube thumbnail generator helps you create bold images that break patterns and demand attention. With styles that range from cinematic to playful, this ai youtube thumbnail generator gives you visuals that pop in any feed—boosting visibility and elevating your channel's first look.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Jumpstart Creativity—Even When You Feel Stuck",
+                        "content": "When ideas run dry, a creative nudge means everything. The ai youtube thumbnail generator takes your prompt—or even your vibe—and spins it into visual inspiration within seconds. It is your rapid-fire moodboard, instantly suggesting AI-generated concepts that unblock your direction and lift you out of thumbnail limbo.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Know What Clicks—Explore Concepts Instantly",
+                        "content": "If you are unsure what drives clicks—bold text, dramatic faces, or subtle composition—the ai youtube thumbnail generator lets you test visual ideas instantly. Generate multiple styles side by side with this ai youtube thumbnail generator and make decisions based on insight, not guesswork. Style tweaks, title swaps, visual trails—it is all at your fingertips.",
+                        "cta-title": "Try it now",
+                        "media": []
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-block",
+                "title": "Why Use an AI YouTube Thumbnail Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Stand Out Instantly",
+                        "content": "When you're competing for attention on YouTube, first impressions matter. An ai youtube thumbnail generator helps you craft bold, personalized visuals that reflect your unique voice and hook viewers before they even hit play."
+                    },
+                    {
+                        "title": "Unlock Creative Flow",
+                        "content": "Whether you're on your tenth upload or your hundredth, the ai youtube thumbnail generator can spark new visual ideas, helping you experiment with colors, text, and layout without stalling your momentum or overthinking your design."
+                    },
+                    {
+                        "title": "Save Time, Stay You",
+                        "content": "Between filming, editing, and publishing, you've got enough on your plate. The ai youtube thumbnail generator quickly translates your content style into captivating thumbnails—so you can stay consistent without creative burnout."
+                    }
+                ]
+            },
+            {
+                "section_type": "title-description-centered-icon-block",
+                "title": "AI YouTube Thumbnail Generator You Can Trust",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "title": "Free to use",
+                        "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+                    },
+                    {
+                        "title": "Fully Private",
+                        "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+                    },
+                    {
+                        "title": "Easy to Start",
+                        "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+                        "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+                    }
+                ]
+            },
+            {
+                "section_type": "how-to-use",
+                "title": "How to Use AI YouTube Thumbnail Generator",
+                "item_columns": 3,
+                "items": [
+                    {
+                        "section_title": "Step1",
+                        "title": "Open the generator",
+                        "content": "Click our youtube thumbnail tool. You don't need to download or install anything on your device."
+                    },
+                    {
+                        "section_title": "Step2",
+                        "title": "Add prompt or image",
+                        "content": "Describe or upload the image your want to turn into youtube thumbnail artwork from your device or your Gallery."
+                    },
+                    {
+                        "section_title": "Step3",
+                        "title": "Wait",
+                        "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+                    }
+                ]
+            },
+            {
+                "section_type": "curated-examples",
+                "title": "",
+                "items": []
+            },
+            {
+                "section_type": "introduction",
+                "title": "Introduction to AI YouTube Thumbnail Generator",
+                "introduction": "The AI YouTube Thumbnail Generator is built for creators who want to stop the scroll. Whether you are launching how-to tutorials, product reviews, or music videos, this generator helps you create attention-grabbing, eye-catching thumbnails in minutes—no design degree needed. Tailor visual concepts with text prompts, explore variations instantly, and elevate click-worthiness effortlessly.\nIn a world where milliseconds decide whether viewers click or scroll, the ai youtube thumbnail generator serves one deep creative goal: turning hesitation into imagination. No more staring at a blank canvas. With every prompt you enter, this ai youtube thumbnail generator answers back with possibility—bold color, cinematic drama, or offbeat charm. Your vision, amplified."
+            },
+            {
+                "section_type": "explore",
+                "title": "Explore AI YouTube Thumbnail Generator Results",
+                "introduction": "",
+                "items": []
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}
