@@ -1,0 +1,300 @@
+{
+  "id": "00000000-0000-0000-0000-000000008126",
+  "name": "fish-logo-generator",
+  "author": "c",
+  "title": "AI Fish Logo Generator",
+  "description": "Create unique Fish Logo with AI Fish Logo Generator",
+  "metadata_title": "AI Fish Logo Generator ｜ Create Fish Logo for Free",
+  "metadata_description": "Generate unique and captivating fish logos with RunComfy’s AI Tool. Perfect for entrepreneurs, designers, and hobbyists, the Fish Logo Generator lets you create professional logos for branding, marketing, or personal projects. Benefit from quick customization and a user-friendly interface designed to enhance creativity. Try it free and watch your ideas come to life today.",
+  "playground_type": "chat_model",
+  "model_order": 8126,
+  "order": 8126,
+  "required_credits": 24,
+  "credits_remarks": "Generating an image requires 24 credits.",
+  "features": [
+    "Multimodal"
+  ],
+  "tags": [
+    "By Function/TEMPLATES/Generator"
+  ],
+  "category": "Logo",
+  "is_parent": false,
+  "object": "Fish Logo",
+  "prompt_placeholder": "Create a high-quality, visually striking Fish Logo in a modern, contemporary style, focusing on a distinctive [fish type] as the central subject, rendered with [art style] for maximum brand impact; incorporate thoughtful use of [color palette], and accentuate key details with [design accents]; optionally surround the fish with [decorative elements], ensuring crisp edge definition and a [composition style] layout suitable for scalable, print-friendly use.",
+  "task_templates": [
+    {
+      "id": "00000000-0000-0000-0000-000000018126",
+      "author": "runcomfy",
+      "name": "Image to Image",
+      "required_credits": 24,
+      "credits_remarks": "",
+      "supported_batch_size": [
+        1
+      ],
+      "openapi": {
+        "components": {
+          "schemas": {
+            "Input": {
+              "properties": {
+                "input_images": {
+                  "title": "Input Images",
+                  "description": "Make sure your images are under 25MB in size.",
+                  "type": "array",
+                  "format": "image_uris",
+                  "items": {
+                    "type": "string",
+                    "format": "image_uri"
+                  },
+                  "maxItems": 1,
+                  "x-rc-group-id": "",
+                  "x-order": null,
+                  "validations": [
+                    {
+                      "validation_rule": "file_size_mb<",
+                      "validation_value": 25,
+                      "validation_error": "File size must be less than 16 MB."
+                    }
+                  ]
+                },
+                "image_prompts": {
+                  "title": "Image Prompt",
+                  "description": "Make sure your image is under 25MB in size.",
+                  "type": "array",
+                  "format": "image_uris",
+                  "items": {
+                    "type": "string",
+                    "format": "image_uri"
+                  },
+                  "maxItems": 3,
+                  "x-rc-group-id": "",
+                  "x-order": 2,
+                  "validations": [
+                    {
+                      "validation_rule": "file_size_mb<",
+                      "validation_value": 25,
+                      "validation_error": "File size must be less than 16 MB."
+                    }
+                  ]
+                },
+                "prompt": {
+                  "title": "Prompt",
+                  "description": "",
+                  "type": "string",
+                  "format": "str",
+                  "default": "",
+                  "x-rc-group-id": "text_positive_prompt",
+                  "x-order": 0
+                },
+                "size": {
+                  "title": "Aspect Ratio (W:H)",
+                  "description": "",
+                  "type": "string",
+                  "format": "str_with_choice",
+                  "enum": [
+                    "3:2",
+                    "1:1",
+                    "2:3"
+                  ],
+                  "default": "1:1",
+                  "x-rc-group-id": "",
+                  "x-order": 4
+                },
+                "quality": {
+                  "title": "",
+                  "description": "",
+                  "type": "string",
+                  "format": "str_with_choice",
+                  "enum": [
+                    "High Performance",
+                    "High Quality"
+                  ],
+                  "default": "High Performance",
+                  "x-rc-group-id": "",
+                  "x-order": 5
+                }
+              },
+              "required": [
+                "prompt"
+              ],
+              "title": "Input",
+              "type": "object"
+            },
+            "Output": {
+              "properties": {
+                "image": {
+                  "title": "Image",
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "title": "Output",
+              "type": "object"
+            }
+          }
+        },
+        "info": {
+          "title": "Runcomfy",
+          "version": "0.1.0"
+        },
+        "openapi": "3.0.2"
+      },
+      "providers": [],
+      "enhancers": {
+        "prompt": [
+          {
+            "enhancer": "OpenAIPromptEnhancer",
+            "enhancer_config": {
+              "model": "gpt-4o",
+              "preset_messages": [],
+              "user_message_template": "#Task\nTransform this Initial Prompt into a Fish Logo image generation prompt.\nWhen you rewrite the prompt, please reference the prompt template below.\nMore importantly, please keep the initial prompt's essence and intent, and make sure the key elements and descriptions are not lost and changed.\n\n#Initial Prompt\n${prompt}\n\n#Prompt Template\nCreate a high-quality, visually striking \"Fish Logo\" in a modern, contemporary style, focusing on a distinctive [fish type] as the central subject, rendered with [design style] for maximum brand impact; incorporate thoughtful use of [color palette], and accentuate key details with [detail effect]; surround the fish with optional [surround element], and if desired, blend in [text/logo] in a [font style], ensuring [composition type] composition and crisp edge definition; lighting should be [lighting style] depending on mood, with an overall tone that is [tone/mood], and clarity maintained for scaling and printed usage.\n\n#Output  \nPlease directly output the final prompt string:"
+            },
+            "fallback_enhancer": "DefaultTemplateEnhancer",
+            "fallback_enhancer_config": {
+              "template": "Fish Logo Design: ${prompt}\nThe output should be an image of Fish Logo"
+            },
+            "use_when": {
+              "input_images": {
+                "$exists": false,
+                "$eq": []
+              }
+            }
+          },
+          {
+            "enhancer": "DefaultTemplateEnhancer",
+            "enhancer_config": {
+              "template": "Please apply all modifications to the **first uploaded image only**.  \nAny additional images I upload are for **reference purposes only** (e.g., style, objects, or colors), and should not be directly edited or replaced.  \nUnless otherwise specified, assume that every instruction I give is intended to **modify the first image**.\n\nInstruction: ${prompt}"
+            },
+            "use_when": {
+              "input_images": {
+                "$exists": true,
+                "$ne": []
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "task_template_presets": [
+    [
+      {
+        "output": {
+          "image": "https://playgrounds-storage-public.runcomfy.net/tools/8126/media-files/promo.webp"
+        }
+      }
+    ],
+    [
+      {
+        "section_type": "use-cases",
+        "title": "Features of the Fish Logo Generator",
+        "items": [
+          {
+            "item_type": "use-case-text-on-right-multi-video",
+            "title": "Endless Visual Styles, Zero Guesswork",
+            "content": "When you're not sure if your brand needs something bold, minimal, vintage, or fluid, the Fish Logo Generator gives you room to explore. Enter a few prompts, and receive a school of design ideas ready to evolve. The Fish Logo Generator thrives on variety — helping you find the perfect style without the painful process of starting over.",
+            "cta-title": "Try it now",
+            "media": []
+          },
+          {
+            "item_type": "use-case-text-on-left-multi-video",
+            "title": "Fast Logos for Fast-Moving Creators",
+            "content": "Deadlines loom, budgets tighten, but your brand still deserves a sharp visual identity. The Fish Logo Generator delivers professional results instantly — no design degree or confusing software required. AI-generated logos mean you get speed without cutting creativity. Just prompt, pick, and swim toward launch.",
+            "cta-title": "Try it now",
+            "media": []
+          },
+          {
+            "item_type": "use-case-text-on-right-multi-video",
+            "title": "Your Idea, Uniquely Rendered",
+            "content": "Tired of templates that all look the same? The Fish Logo Generator creates original logos from your unique concepts — whether you dream up mythical deep-sea creatures or simple linework trout. With the Fish Logo Generator, your logo won’t just look aquatic... it'll feel unmistakably yours, right from the first click.",
+            "cta-title": "Try it now",
+            "media": []
+          }
+        ]
+      },
+      {
+        "section_type": "title-description-block",
+        "title": "Why Use a Fish Logo Generator",
+        "item_columns": 3,
+        "items": [
+          {
+            "title": "Bring Ideas to Life",
+            "content": "When your ocean-inspired business or project needs a symbol, generating a Fish Logo helps you quickly visualize your concept and translate abstract ideas into clear, creative identity."
+          },
+          {
+            "title": "Express Your Identity",
+            "content": "Whether you're launching a seafood brand or building a personal blog about marine life, a custom Fish Logo helps you express your unique style and values through a design that feels authentically yours."
+          },
+          {
+            "title": "Explore Creative Direction",
+            "content": "Using a generator for your Fish Logo gives you the freedom to experiment with shapes, colors, and styles without pressure, opening unexpected paths toward a design that truly fits your vision."
+          }
+        ]
+      },
+      {
+        "section_type": "title-description-centered-icon-block",
+        "title": "Fish Logo Generator That Works Instantly",
+        "item_columns": 3,
+        "items": [
+          {
+            "title": "Free to use",
+            "content": "Unlock powerful art tools at zero cost, making it easy for anyone to create and innovate without barriers.",
+            "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_1.png"
+          },
+          {
+            "title": "Fully Private",
+            "content": "Your creations and data stay confidential, guaranteeing your artistic work remains safe and secure.",
+            "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_2.png"
+          },
+          {
+            "title": "Easy to Start",
+            "content": "Built for ease of use, so you can jump in and thrive—no matter your skill level or experience.",
+            "icon_url": "https://playgrounds-storage-public.runcomfy.net/tools/images/icon_why_use_3.png"
+          }
+        ]
+      },
+      {
+        "section_type": "how-to-use",
+        "title": "How to Use the Fish Logo Generator",
+        "item_columns": 3,
+        "items": [
+          {
+            "section_title": "Step1",
+            "title": "Open the generator",
+            "content": "Click our Fish Logo tool. You don't need to download or install anything on your device."
+          },
+          {
+            "section_title": "Step2",
+            "title": "Add prompt or image",
+            "content": "Describe or upload the image your want to turn into Fish Logo artwork from your device or your Gallery."
+          },
+          {
+            "section_title": "Step3",
+            "title": "Wait",
+            "content": "The Image Generation process will start automatically. Simply wait a moment for your image to be generated or restyled."
+          }
+        ]
+      },
+      {
+        "section_type": "curated-examples",
+        "title": "",
+        "items": []
+      },
+      {
+        "section_type": "introduction",
+        "title": "Introduction to the Fish Logo Generator",
+        "introduction": "Fish Logo Generator is a creative AI-powered tool that helps entrepreneurs, designers, and hobbyists quickly produce distinctive fish-themed logos from text or image prompts. Whether you're branding a seafood startup, pet shop, or marine blog, this generator delivers bold visuals in seconds.\nFrom koi elegance to neon reefs, the Fish Logo Generator lets you dive deep into style without drowning in complexity. It's your shortcut to inspired branding — sleek, whimsical, or wildly unexpected — all swimming from a single idea toward your own design horizon."
+      },
+      {
+        "section_type": "explore",
+        "title": "Explore Results From Fish Logo Generator",
+        "introduction": "",
+        "items": []
+      },
+      {
+        "section_type": "related-playgrounds",
+        "title": "Related Playgrounds",
+        "items": []
+      }
+    ]
+  ]
+}
