@@ -1,0 +1,437 @@
+{
+    "id": "00000000-0000-0000-0000-000000007070",
+    "name": "seedance-1-0",
+    "author": "bytedance",
+    "title": "Seedance 1.0 Pro",
+    "object": "Seedance 1.0 Pro",
+    "description": "Create fluid, expressive animations with multi-shot storytelling features.",
+    "metadata_title": "Seedance 1.0 AI Video Generator for Free",
+    "metadata_description": "Elevate your animations with Seedance 1.0 Pro AI video model by ByteDance. Create cinematic, character-driven content with ease. Try Seedance 1.0 today!",
+    "playground_type": "model",
+    "model_order": 22,
+    "order": 22,
+    "required_credits": 45,
+    "credits_remarks": "Video generation requires 45 credits (480p/5s), 90 credits (480p/10s), 225 credits (1080p/5s), or 450 credits (1080p/10s), both for T2V and I2V.",
+    "features": [
+        "T2V",
+        "I2V"
+    ],
+    "tags": [
+        "By Function/VIDEO/Generate Video"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000017070",
+            "author": "runcomfy",
+            "name": "Text to Video",
+            "required_credits": 45,
+            "supported_batch_size": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "openapi": {
+                "openapi": "3.0.2",
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "title": "Input",
+                            "type": "object",
+                            "properties": {
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "resolution": {
+                                    "title": "Resolution",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "480p",
+                                        "1080p"
+                                    ],
+                                    "default": "480p",
+                                    "x-rc-group-id": "",
+                                    "x-order": 1
+                                },
+                                "aspect_ratio": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "21:9",
+                                        "16:9",
+                                        "4:3",
+                                        "1:1",
+                                        "3:4",
+                                        "9:16",
+                                        "9:21"
+                                    ],
+                                    "default": "9:16",
+                                    "x-rc-group-id": "",
+                                    "x-order": 2
+                                },
+                                "duration": {
+                                    "title": "Duration",
+                                    "description": "",
+                                    "type": "integer",
+                                    "format": "int_with_choice",
+                                    "enum": [
+                                        5,
+                                        10
+                                    ],
+                                    "default": 5,
+                                    "x-rc-group-id": "",
+                                    "x-order": 3
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ]
+                        },
+                        "Output": {}
+                    }
+                }
+            },
+            "providers": [
+                {
+                    "name": "volcengine-account1",
+                    "service": "volcengine",
+                    "tags": [
+                        "i2v"
+                    ],
+                    "presets": {
+                        "header": {},
+                        "body": {
+                            "model": "doubao-seedance-1-0-pro-250528"
+                        }
+                    },
+                    "endpoints": {
+                        "predict": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks",
+                            "method": "POST"
+                        },
+                        "status": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/{provider_task_id}",
+                            "method": "GET"
+                        },
+                        "cancel": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/{provider_task_id}",
+                            "method": "DELETE"
+                        },
+                        "result": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/{provider_task_id}",
+                            "method": "GET"
+                        }
+                    },
+                    "input_mapping_function": "predictors.wrappers.volcengine_video_input",
+                    "output_mapping_function": "predictors.wrappers.volcengine_video_output"
+                }
+            ]
+        },
+        {
+            "id": "00000000-0000-0000-0000-000000027070",
+            "author": "runcomfy",
+            "name": "Image to Video",
+            "required_credits": 45,
+            "supported_batch_size": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "openapi": {
+                "openapi": "3.0.2",
+                "info": {
+                    "title": "Runcomfy",
+                    "version": "0.1.0"
+                },
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "title": "Input",
+                            "type": "object",
+                            "properties": {
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0
+                                },
+                                "resolution": {
+                                    "title": "Resolution",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "480p",
+                                        "1080p"
+                                    ],
+                                    "default": "480p",
+                                    "x-rc-group-id": "",
+                                    "x-order": 2
+                                },
+                                "image_url": {
+                                    "title": "Image",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "image_uri",
+                                    "x-rc-group-id": "first_frame_image",
+                                    "x-order": 1,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "width_pixels<",
+                                            "validation_value": 6000,
+                                            "validation_error": "The uploaded image width and height must not exceed 6000 pixels."
+                                        },
+                                        {
+                                            "validation_rule": "height_pixels<",
+                                            "validation_value": 6000,
+                                            "validation_error": "The uploaded image width and height must not exceed 6000 pixels."
+                                        },
+                                        {
+                                            "validation_rule": "width_pixels>",
+                                            "validation_value": 300,
+                                            "validation_error": "The uploaded image width and height must not be less than 300 pixels."
+                                        },
+                                        {
+                                            "validation_rule": "height_pixels>",
+                                            "validation_value": 300,
+                                            "validation_error": "The uploaded image width and height must not be less than 300 pixels."
+                                        },
+                                        {
+                                            "validation_rule": "width/height>",
+                                            "validation_value": 0.4,
+                                            "validation_error": "The aspect ratio range should be between 0.4 and 2.5."
+                                        },
+                                        {
+                                            "validation_rule": "width/height<",
+                                            "validation_value": 2.5,
+                                            "validation_error": "The aspect ratio range should be between 0.4 and 2.5."
+                                        },
+                                        {
+                                            "validation_rule": "file_size_mb<",
+                                            "validation_value": 30,
+                                            "validation_error": "File size must be less than 30 MB."
+                                        }
+                                    ]
+                                },
+                                "duration": {
+                                    "title": "Duration",
+                                    "description": "",
+                                    "type": "integer",
+                                    "format": "int_with_choice",
+                                    "enum": [
+                                        5,
+                                        10
+                                    ],
+                                    "default": 5,
+                                    "x-rc-group-id": "",
+                                    "x-order": 3
+                                }
+                            },
+                            "required": [
+                                "prompt",
+                                "image_url"
+                            ]
+                        },
+                        "Output": {}
+                    }
+                }
+            },
+            "providers": [
+                {
+                    "name": "volcengine-account1",
+                    "service": "volcengine",
+                    "tags": [
+                        "i2v"
+                    ],
+                    "presets": {
+                        "header": {},
+                        "body": {
+                            "model": "doubao-seedance-1-0-pro-250528"
+                        }
+                    },
+                    "endpoints": {
+                        "predict": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks",
+                            "method": "POST"
+                        },
+                        "status": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/{provider_task_id}",
+                            "method": "GET"
+                        },
+                        "cancel": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/{provider_task_id}",
+                            "method": "DELETE"
+                        },
+                        "result": {
+                            "url": "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/{provider_task_id}",
+                            "method": "GET"
+                        }
+                    },
+                    "input_mapping_function": "predictors.wrappers.volcengine_video_input",
+                    "output_mapping_function": "predictors.wrappers.volcengine_video_output"
+                }
+            ]
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/promo.mp4",
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "introduction",
+                "title": "Introduction to Seedance 1.0 AI Video Generator",
+                "introduction": "Seedance 1.0 is the first official version of ByteDance’s motion generation framework, designed to help creators produce cinematic, character-driven animations with high fidelity. Released as part of the SEED creative tools suite, Seedance 1.0 enables detailed visualization of motion and storytelling movement.\nSeedance 1.0 is a generation tool built for animators, storytellers, and content creators who need smooth motion and expressive visuals. With Seedance 1.0, you get native multi-shot storytelling, smooth and stable motion transitions, and a wide range of stylistic outputs—all designed to elevate motion content effortlessly."
+            },
+            {
+                "section_type": "use-cases",
+                "title": "Features of Seedance 1.0 AI Video Generator",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Seedance 1.0 - Smooth & Stable Motion",
+                        "content": "Seedance 1.0 delivers smooth and stable motion generation, allowing you to craft believable character movement from start to finish. The updated algorithms reduce jitter and increase continuity across complex shots. With Seedance 1.0, your animations flow naturally without frame disruption, enabling consistent rendering for cinematic or social content. This makes Seedance 1.0 ideal for creators aiming for fluid animation and high-quality motion sequences.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase1-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase1-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017070"
+                            },
+                            {
+                                "input": {
+                                    "prompt": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase1-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase1-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017070"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Seedance 1.0 - Multi-Shot Storytelling",
+                        "content": "With native multi-shot storytelling, Seedance 1.0 supports continuous animation across different scenes and camera angles. You can easily build a cohesive narrative with seamless transitions between shots. Seedance 1.0 helps you manage pacing, emotion, and action across sequences, ideal for visual storytelling professionals who need rich scene continuity and smart motion flow in every project.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase2-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase2-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017070"
+                            },
+                            {
+                                "input": {
+                                    "prompt": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase2-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase2-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017070"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Seedance 1.0 - Diverse Stylistic Expression",
+                        "content": "Seedance 1.0 empowers you to explore diverse motion styles, from realistic human interactions to artsy or stylized behaviors. Whether you're producing a short film or a branded sequence, Seedance 1.0 lets you control the feel and flow of your visuals. The generation tool supports high adaptability in expression, combining creative flexibility with technical precision for each animated output.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase3-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase3-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017070"
+                            },
+                            {
+                                "input": {
+                                    "prompt": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase3-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7070/media-files/usecase3-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017070"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "section_type": "x-tweets",
+                "title": "Seedance 1.0 on X: Animation Insights and Drops",
+                "items": [
+                    {
+                        "senja_id": "73c81a01-c633-44de-b016-4630a7bd4e0d"
+                    }
+                ]
+            },
+            {
+                "section_type": "youtube-videos",
+                "title": "Seedance 1.0's YouTube: Demos and Reactions",
+                "items": [
+                    {
+                        "video_id": "VETijjhmmEk"
+                    },
+                    {
+                        "video_id": "xbJL7BH3nfo"
+                    },
+                    {
+                        "video_id": "Y4AbT6AopBM"
+                    },
+                    {
+                        "video_id": "mRDD64vyojA"
+                    },
+                    {
+                        "video_id": "-hDVEou4cus"
+                    },
+                    {
+                        "video_id": "Dx8Jdinu9e4"
+                    }
+                ]
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}
