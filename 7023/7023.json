@@ -1,0 +1,833 @@
+{
+    "id": "00000000-0000-0000-0000-000000007023",
+    "name": "veo-3",
+    "author": "google-deepmind",
+    "title": "Veo 3 AI Video Generator",
+    "object": "Veo 3",
+    "description": "Realistic motion, dynamic camerawork, and improved physics.",
+    "playground_type": "model",
+    "metadata_title": "Google Veo 3 Free: Generate AI Videos with Audio & Full Control",
+    "metadata_description": "Use the Google Veo 3 to create videos with style control, prompt input, and camera movement. Try Free Google Veo 3 AI features Now.",
+    "model_order": 25,
+    "order": 25,
+    "required_credits": 1200,
+    "credits_remarks": "Generating a video requires 1,200 credits without audio, or 1,800 credits with audio.",
+    "features": [
+        "T2V",
+        "I2V",
+        "High-cost model"
+    ],
+    "tags": [
+        "By Function/VIDEO/Generate Video"
+    ],
+    "task_templates": [
+        {
+            "id": "00000000-0000-0000-0000-000000017023",
+            "author": "runcomfy",
+            "name": "Text to Video",
+            "required_credits": 1200,
+            "credits_remarks": "Generating a video requires 1,200 credits without audio, or 1,800 credits with audio.",
+            "supported_batch_size": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "maxLength": 1999,
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 0,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "length<=",
+                                            "validation_value": 2000,
+                                            "validation_error": "The prompt must be 2000 characters or less."
+                                        },
+                                        {
+                                            "validation_rule": "length>=",
+                                            "validation_value": 1,
+                                            "validation_error": "The prompt must be at least 1 characters long."
+                                        }
+                                    ]
+                                },
+                                "negativePrompt": {
+                                    "title": "Negative Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "x-rc-group-id": "text_negative_prompt",
+                                    "x-order": 1,
+                                    "maxLength": 2000
+                                },
+                                "aspectRatio": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "16:9"
+                                    ],
+                                    "default": "16:9",
+                                    "x-rc-group-id": "",
+                                    "x-order": 3
+                                },
+                                "seed": {
+                                    "title": "Seed",
+                                    "description": "",
+                                    "type": "integer",
+                                    "format": "int_with_arrows_and_random",
+                                    "x-rc-group-id": "seed",
+                                    "x-order": 4,
+                                    "maximum": 2147483647
+                                },
+                                "generateAudio": {
+                                    "title": "Generate Audio",
+                                    "description": "Enable this option to generate audio for the video. Generating a video requires 1,200 credits without audio, or 1,800 credits with audio.",
+                                    "type": "boolean",
+                                    "format": "bool",
+                                    "default": false,
+                                    "x-rc-group-id": "",
+                                    "x-order": 5
+                                }
+                            },
+                            "required": [
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "video": {
+                                    "title": "Video",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "info": {
+                "title": "Runcomfy",
+                "version": "0.1.0"
+            },
+            "providers": [
+                {
+                    "name": "kie-account1",
+                    "service": "kie",
+                    "tags": [
+                        "t2v"
+                    ],
+                    "presets": {
+                        "header": {},
+                        "body": {}
+                    },
+                    "endpoints": {
+                        "predict": {
+                            "url": "https://kieai.erweima.ai/api/v1/veo/generate",
+                            "method": "POST"
+                        },
+                        "status": {
+                            "url": "https://kieai.erweima.ai/api/v1/veo/record-info?taskId={provider_task_id}",
+                            "method": "GET"
+                        },
+                        "cancel": {
+                            "url": "",
+                            "method": "GET"
+                        },
+                        "result": {
+                            "url": "https://kieai.erweima.ai/api/v1/veo/record-info?taskId={provider_task_id}",
+                            "method": "GET"
+                        }
+                    },
+                    "input_mapping_function": "predictors.wrappers.kie_veo3_input",
+                    "output_mapping_function": "predictors.wrappers.kie_veo3_single_video_output"
+                },
+                {
+                    "name": "pollo-account1",
+                    "service": "pollo",
+                    "tags": [
+                        "i2v"
+                    ],
+                    "presets": {
+                        "header": {},
+                        "body": {}
+                    },
+                    "endpoints": {
+                        "predict": {
+                            "url": "https://pollo.ai/api/platform/generation/google/veo3",
+                            "method": "POST"
+                        },
+                        "status": {
+                            "url": "https://pollo.ai/api/platform/generation/{provider_task_id}/status",
+                            "method": "GET"
+                        },
+                        "cancel": {
+                            "url": "",
+                            "method": "GET"
+                        },
+                        "result": {
+                            "url": "https://pollo.ai/api/platform/generation/{provider_task_id}/status",
+                            "method": "GET"
+                        }
+                    },
+                    "input_mapping_function": "predictors.wrappers.default",
+                    "output_mapping_function": "predictors.wrappers.pollo_single_video_output"
+                }
+            ]
+        },
+        {
+            "id": "00000000-0000-0000-0000-000000027023",
+            "author": "runcomfy",
+            "name": "Image to Video",
+            "required_credits": 1200,
+            "credits_remarks": "Generating a video requires 1,200 credits without audio, or 1,800 credits with audio.",
+            "supported_batch_size": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "openapi": {
+                "components": {
+                    "schemas": {
+                        "Input": {
+                            "properties": {
+                                "image": {
+                                    "title": "Image",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "image_uri",
+                                    "x-rc-group-id": "first_frame_image",
+                                    "x-order": 0
+                                },
+                                "prompt": {
+                                    "title": "Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "maxLength": 1999,
+                                    "x-rc-group-id": "text_positive_prompt",
+                                    "x-order": 1,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "length<=",
+                                            "validation_value": 2000,
+                                            "validation_error": "The prompt must be 2000 characters or less."
+                                        },
+                                        {
+                                            "validation_rule": "length>=",
+                                            "validation_value": 1,
+                                            "validation_error": "The prompt must be at least 1 characters long."
+                                        }
+                                    ]
+                                },
+                                "negativePrompt": {
+                                    "title": "Negative Prompt",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str",
+                                    "x-rc-group-id": "text_negative_prompt",
+                                    "x-order": 2,
+                                    "validations": [
+                                        {
+                                            "validation_rule": "length<=",
+                                            "validation_value": 2000,
+                                            "validation_error": "The negative prompt must be 2000 characters or less."
+                                        }
+                                    ]
+                                },
+                                "aspectRatio": {
+                                    "title": "Aspect Ratio (W:H)",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "str_with_choice",
+                                    "enum": [
+                                        "16:9"
+                                    ],
+                                    "default": "16:9",
+                                    "x-rc-group-id": "",
+                                    "x-order": 4
+                                },
+                                "seed": {
+                                    "title": "Seed",
+                                    "description": "",
+                                    "type": "integer",
+                                    "format": "int_with_arrows_and_random",
+                                    "x-rc-group-id": "seed",
+                                    "x-order": 5,
+                                    "maximum": 2147483647
+                                },
+                                "generateAudio": {
+                                    "title": "Generate Audio",
+                                    "description": "Enable this option to generate audio for the video. Generating a video requires 1,200 credits without audio, or 1,800 credits with audio.",
+                                    "type": "boolean",
+                                    "format": "bool",
+                                    "default": false,
+                                    "x-rc-group-id": "",
+                                    "x-order": 6
+                                }
+                            },
+                            "required": [
+                                "image",
+                                "prompt"
+                            ],
+                            "title": "Input",
+                            "type": "object"
+                        },
+                        "Output": {
+                            "properties": {
+                                "video": {
+                                    "title": "Video",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "title": "Output",
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "info": {
+                "title": "Runcomfy",
+                "version": "0.1.0"
+            },
+            "providers": [
+                {
+                    "name": "kie-account1",
+                    "service": "kie",
+                    "tags": [
+                        "t2v"
+                    ],
+                    "presets": {
+                        "header": {},
+                        "body": {}
+                    },
+                    "endpoints": {
+                        "predict": {
+                            "url": "https://kieai.erweima.ai/api/v1/veo/generate",
+                            "method": "POST"
+                        },
+                        "status": {
+                            "url": "https://kieai.erweima.ai/api/v1/veo/record-info?taskId={provider_task_id}",
+                            "method": "GET"
+                        },
+                        "cancel": {
+                            "url": "",
+                            "method": "GET"
+                        },
+                        "result": {
+                            "url": "https://kieai.erweima.ai/api/v1/veo/record-info?taskId={provider_task_id}",
+                            "method": "GET"
+                        }
+                    },
+                    "input_mapping_function": "predictors.wrappers.kie_veo3_input",
+                    "output_mapping_function": "predictors.wrappers.kie_veo3_single_video_output"
+                },
+                {
+                    "name": "pollo-account1",
+                    "service": "pollo",
+                    "tags": [
+                        "t2v"
+                    ],
+                    "presets": {
+                        "header": {},
+                        "body": {}
+                    },
+                    "endpoints": {
+                        "predict": {
+                            "url": "https://pollo.ai/api/platform/generation/google/veo3",
+                            "method": "POST"
+                        },
+                        "status": {
+                            "url": "https://pollo.ai/api/platform/generation/{provider_task_id}/status",
+                            "method": "GET"
+                        },
+                        "cancel": {
+                            "url": "",
+                            "method": "GET"
+                        },
+                        "result": {
+                            "url": "https://pollo.ai/api/platform/generation/{provider_task_id}/status",
+                            "method": "GET"
+                        }
+                    },
+                    "input_mapping_function": "predictors.wrappers.default",
+                    "output_mapping_function": "predictors.wrappers.pollo_single_video_output"
+                }
+            ]
+        }
+    ],
+    "task_template_presets": [
+        [
+            {
+                "output": {
+                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/promo.mp4",
+                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/promo.webp"
+                }
+            }
+        ],
+        [
+            {
+                "section_type": "introduction",
+                "title": "Introduction of Google Veo 3",
+                "introduction": "Google Veo 3 is Google's latest AI video generation model, unveiled at I/O 2025. As part of Google's broader creative ecosystem, Google Veo 3 sets a new standard for realism and integrated content creation. Building on its predecessors, Google Veo 3 brings major improvements in visual fidelity, prompt comprehension, and now native audio generation—marking a significant leap over previous model Veo 2. Google Veo 3 is now officially available on Our Playground - start creating with it now!"
+            },
+            {
+                "section_type": "use-cases",
+                "title": "Features of Google Veo 3 AI Video Creations",
+                "items": [
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Native Audio and Sound Design",
+                        "content": "The Google Veo 3 generates synchronized audio directly from your prompt—adding ambient noise, sound effects, and dialogue without external editing tools. This native audio capability delivers rich, immersive soundscapes tailored to your scenes.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-3-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-3-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-4-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase1-4-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Greater Control with Prompt Accuracy",
+                        "content": "Built for creative precision, the Google Veo 3's AI video generator follows multi-step prompts and complex scene structures with improved accuracy. It enables consistent storytelling through better alignment with your narrative intent.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-3-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-3-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-4-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase2-4-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Visual Style and Character Consistency",
+                        "content": "With Google Veo 3, your video can match a specific artistic style and maintain consistent character design. Use reference images to guide both visual tone and character appearance across multiple shots.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-3-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-3-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-4-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase3-4-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Advanced Framing and Camera Movement",
+                        "content": "Google Veo 3 offers camera controls that let you frame scenes and direct movement with cinematic precision. Define the exact position, angle, and trajectory of the camera to shape the viewers perspective. Create smooth visual transitions between key moments by providing first and last frame images.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-3-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-3-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-4-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase4-4-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Outpainting for Expanded Scenes",
+                        "content": "Need a wider view or a new format? Google Veo 3's outpainting capability extends your video beyond its original frame—generating new, stylistically aligned content that adapts to different screen sizes.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase5-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase5-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase5-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase5-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Add or Remove Objects Naturally",
+                        "content": "Transform your scene with ease. Google Veo 3 video lets you add imaginative or realistic objects and remove unwanted ones while preserving natural lighting, shadow, and context for seamless integration.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-3-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-3-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-4-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase6-4-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-left-multi-video",
+                        "title": "Character Controls with Performance Input",
+                        "content": "Bring characters to life through your own voice, face, or body movement. With character control capabilities, Google Veo 3's ai video translates your performance into dynamic, expressive animations.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase7-1-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase7-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase7-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase7-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase7-3-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase7-3-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "use-case-text-on-right-multi-video",
+                        "title": "Motion Master for Object Path Control",
+                        "content": "Precisely define how objects move through space. The Google Veo 3 model allows you to select an object and assign a motion path, generating smooth, physics-aware animation in response.",
+                        "cta-title": "Try it now",
+                        "media": [
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase8-1-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            },
+                            {
+                                "input": {
+                                    "prompt": "",
+                                    "image_url": ""
+                                },
+                                "output": {
+                                    "video": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase8-2-output.mp4",
+                                    "image": "https://playgrounds-storage-public.runcomfy.net/tools/7023/media-files/usecase8-2-output.webp"
+                                },
+                                "task_template_id": "00000000-0000-0000-0000-000000017023"
+                            }
+                        ]
+                    }
+                ],
+                "cta-title": "Try it now",
+                "cta-link": "https://playgrounds.runcomfy.net/veo-3"
+            },
+            {
+                "section_type": "x-tweets",
+                "title": "Google Veo 3 on X: Discussions and Content Drops",
+                "items": [
+                    {
+                        "senja_id": "4ccbb413-6b7a-4a59-ad74-18b5bbb0edfd"
+                    }
+                ]
+            },
+            {
+                "section_type": "youtube-videos",
+                "title": "Goolge Veo 3 YouTube Videos: Real Demos, Real Feedback",
+                "items": [
+                    {
+                        "video_id": "j4CT5dZe8ZA"
+                    },
+                    {
+                        "video_id": "KMMtbj3-1bM"
+                    },
+                    {
+                        "video_id": "weJKnFzheYQ"
+                    },
+                    {
+                        "video_id": "DY5vnaCx_KE"
+                    },
+                    {
+                        "video_id": "x-emzK0sDkA"
+                    },
+                    {
+                        "video_id": "q9bHGAD_Auk"
+                    },
+                    {
+                        "video_id": "-UW6nMGN2Bw"
+                    },
+                    {
+                        "video_id": "UC_Cw9xqIuE"
+                    },
+                    {
+                        "video_id": "Hrn34NKbZ9A"
+                    },
+                    {
+                        "video_id": "5W83LvLqwJ4"
+                    },
+                    {
+                        "video_id": "yGvultqA2bw"
+                    },
+                    {
+                        "video_id": "vuV2ETMbovw"
+                    },
+                    {
+                        "video_id": "FcCF-bRa1uY"
+                    },
+                    {
+                        "video_id": "9wn_56Kja3k"
+                    },
+                    {
+                        "video_id": "q-kQNvnSi6c"
+                    }
+                ]
+            },
+            {
+                "section_type": "reddit-videos",
+                "title": "Google Veo 3 Prompt Guide: How Users Create Stunning Results",
+                "items": [
+                    {
+                        "senja_id": "9f3521f9-1981-40b9-ba0d-433249b94254"
+                    }
+                ]
+            },
+            {
+                "section_type": "related-playgrounds",
+                "title": "Related Playgrounds",
+                "items": []
+            }
+        ]
+    ]
+}
