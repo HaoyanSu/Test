@@ -1,0 +1,121 @@
+Hugging Face
+Models
+Datasets
+Spaces
+Community
+Docs
+Pricing
+svjack
+/
+Kontext_OmniConsistency_lora 
+like
+33
+Model card
+Files and versions
+xet
+Community
+1
+Edit model card
+YAML Metadata Warning: empty or missing yaml metadata in repo card (https://huggingface.co/docs/hub/model-cards#model-card-metadata)
+LoRA Fine-tuned Kontext Model for Artistic Style Transfer
+
+This repository provides a LoRA (Low-Rank Adaptation) fine-tuned variant of the Kontext image consistency model, optimized for transforming images into 22 distinct artistic styles while preserving content consistency.
+
+🎨 Supported Art Styles
+can refer on https://github.com/showlab/OmniConsistency
+Style Category	Example Prompt	Visual Characteristics
+3D Chibi Style	transform it into 3D Chibi style	Exaggerated cute proportions with three-dimensional rendering and soft shading
+American Cartoon Style	transform it into American Cartoon style	Bold outlines, vibrant colors, and exaggerated expressions typical of Western animation
+Chinese Ink Style	transform it into Chinese Ink style	Flowing brushstrokes, monochromatic tones, and traditional shan shui aesthetics
+Clay Toy Style	transform it into Clay Toy style	Matte textures with visible fingerprints and soft plasticine-like appearance
+Fabric Style	transform it into Fabric style	Woven textile appearance with stitch details and cloth-like folds
+Ghibli Style	transform it into Ghibli style	Soft watercolor-like backgrounds, expressive eyes, and whimsical Studio Ghibli aesthetic
+Irasutoya Style	transform it into Irasutoya style	Clean vector graphics with flat colors and simple shapes (Japanese clipart style)
+Jojo Style	transform it into Jojo style	Dynamic "bizarre" poses, exaggerated muscles, and dramatic manga shading
+LEGO Style	transform it into LEGO style	Blocky construction with cylindrical hands and studded surfaces
+Line Style	transform it into Line style	Minimalist continuous-line drawings with negative space emphasis
+Macaron Style	transform it into Macaron style	Pastel colors with soft gradients and candy-like textures
+Oil Painting Style	transform it into Oil Painting style	Visible impasto brushstrokes and rich pigment textures
+Origami Style	transform it into Origami style	Geometric folded paper appearance with crisp edges
+Paper Cutting Style	transform it into Paper Cutting style	Silhouette art with intricate negative space patterns
+Picasso Style	transform it into Picasso style	Cubist fragmentation and abstract facial rearrangements
+Pixel Style	transform it into Pixel style	8-bit/16-bit retro game aesthetic with visible square pixels
+Poly Style	transform it into Poly style	Low-polygon 3D models with flat-shaded triangular facets
+Pop Art Style	transform it into Pop Art style	Ben-Day dots, bold colors, and high-contrast comic book styling
+Rick Morty Style	transform it into Rick Morty style	Squiggly lines, grotesque proportions, and adult swim animation style
+Snoopy Style	transform it into Snoopy style	Simple black-and-white comic strip aesthetic with round features
+Vector Style	transform it into Vector style	Clean geometric shapes with gradient fills and sharp edges
+Van Gogh Style	transform it into Van Gogh style	Swirling brushwork, thick impasto, and post-impressionist color fields
+🖼️ Style Transformation Examples
+Ghibli Style Transformation (爱豆翔)
+Source Image	Target Image
+
+	
+
+Prompt: transform it into Ghibli style	Characteristics: Soft watercolor textures, expressive eyes
+LEGO Style Transformation (吃冰淇凌的翔)
+Source Image	Target Image
+
+	
+
+Prompt: transform it into LEGO style	Characteristics: Blocky construction with cylindrical hands and studded surfaces
+3D Chibi Style Transformation （包拯）
+Source Image	Target Image
+
+	
+
+Prompt: transform it into 3D Chibi style	Characteristics: Exaggerated cute proportions, 3D rendering
+Oil Painting Style Transformation （拿破仑）
+Source Image	Target Image
+
+	
+
+Prompt: transform it into Oil Painting style	Characteristics: Visible brushstrokes, impasto texture
+Jojo Style Transformation （叶卡捷琳娜）
+Source Image	Target Image
+
+	
+
+Prompt: transform it into Jojo style	Characteristics: Dynamic poses, bold manga shading
+✨ Example Workflow
+graph LR
+    A[Original Image] --> B(Kontext + LoRA)
+    B --> C{Style Prompt}
+    C -->|Ghibli| D["<img src='https://huggingface.co/datasets/svjack/Xiang_idol_Kontext_OmniConsistency_lora_Images/resolve/main/ghibli_example.jpg' width='150'/>"]
+    C -->|3D Chibi| E["<img src='https://huggingface.co/datasets/svjack/Xiang_idol_Kontext_OmniConsistency_lora_Images/resolve/main/chibi_example.jpg' width='150'/>"]
+    C -->|Oil Painting| F["<img src='https://huggingface.co/datasets/svjack/Xiang_OmniConsistency_Images/resolve/main/oil_example.jpg' width='150'/>"]
+    C -->|Jojo| G["<img src='https://huggingface.co/datasets/svjack/Premier_Zhou_OmniConsistency_Images/resolve/main/jojo_example.jpg' width='150'/>"]
+    C -->|Van Gogh| H["<img src='https://huggingface.co/datasets/svjack/Xiang_OmniConsistency_Images/resolve/main/vangogh_example.jpg' width='150'/>"]
+
+
+Explore more examples:
+
+Xiang Idol Style Transfers
+Xiang IceCream Style Transfers
+General Examples
+Historical Transforms
+Model Details
+Base Architecture: Kontext (12B-parameter rectified flow transformer)
+Fine-tuning: LoRA adaptation for multi-style transfer
+Model File: my_first_flux_kontext_lora_v1_000005000.safetensors
+Downloads last month
+
+-
+
+Downloads are not tracked for this model.
+How to track
+Inference Providers
+NEW
+This model isn't deployed by any Inference Provider.
+🙋
+Ask for provider support
+System theme
+TOS
+Privacy
+About
+Jobs
+Models
+Datasets
+Spaces
+Pricing
+Docs
