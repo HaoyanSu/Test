@@ -1,0 +1,147 @@
+MICKMUMPITZ
+Home
+Guides
+Workflows
+About
+Create Controllable Characters for your AI Movies
+
+[FULL GUIDE]
+
+᛫
+
+Jul 17, 2025
+
+᛫
+
+by Mickmumpitz
+
+Learn the game-changing free AI VFX workflow and discover how to add controllable creatures & consistent characters to any footage using just one reference image and Wan 2.1. VACE in ComfyUI. This tutorial walks you through cutting-edge AI animation techniques that compete with expensive studio methods, including motion control using Blender and After Effects. We'll show you these breakthrough AI video generation methods by creating a complete smartphone-shot short film featuring a magical crystal-cat-dragon. Whether you're making YouTube content, social media videos, or professional projects, these AI-powered VFX techniques will transform your creative process and help you produce high-quality creature animations using completely free, open-source AI tools.
+
+🎨 Workflow Sections
+
+🟨 Important Notes
+⬜ Input / Output / Model Loaders
+🟩 Preparation
+🟪 Video Generation
+
+
+
+1. MODEL LOADERS
+
+In this section, you can download the required models using the links on the left side. Additionally, you have the option to increase the blocks_to_swap value in the “Video Block Swap” step if you're working with limited VRAM.
+
+2. VIDEO INPUT & SIZE SELECTION
+
+We offer three predefined resolution settings. By default, 576p is selected as it provides a good balance between quality, generation time, and has also great animation — though this is extremely random, as we all know. You can also use the switch with 1 for 720p or 3 for 504p.
+
+You can define how many frames should be generated in the “frames” node. The “skip frames” option allows you to offset the video if needed.
+
+At the bottom right, you can select whether to use the Inpainting method or the Start Frame + ControlNet method.
+
+3. REFERENCE IMAGE
+
+Upload the reference image that contains the character you want to integrate into the video. Nothing else is needed in this step – just load the image and you’re good to go.
+
+4. POINT SYSTEM
+
+The “Point System” section offers multiple options for defining point data for your animation.
+
+In the center, you can setup the source of your Point Data:
+
+1 = ComfyUI Spline Editor
+
+2 = Coordinate data from external tools such as Blender or After Effects (plugins available)
+
+3 = Spline-Path-Control Web interface
+
+If you choose option 2, use this text field to paste your coordinate data. Below that field, you'll find the "Create Shape Image on Path" node. Here, you need to use the resolution of the project where your coordinates originated from. We limited the coordinate resolution to 720p maximum for performance reasons. Higher resolutions can significantly increase the processing time of this node.
+
+If you have created coordinates in a high resolution, you can easily convert them to 720p using this web converter tool.
+
+5. MANUAL POINTS
+
+In the "Manual Points" section, the first frame of the video is loaded. You can then create splines on this frame. Based on these splines, it will automatically generate point data for the total frame range.
+
+6. SPLINE PATH CONTROL
+
+If you are using the SPLINE PATH CONTROL tool, enable this section and upload your exported video there.
+
+Pay attention to the recommended shape settings in the Editor:
+
+Color: Use 100% red
+
+Width: 4
+
+Size: 64 I 64
+
+Inpainting vs. ControlNet
+
+From this point, the workflow splits depending on which method you selected earlier in the “Video Input & Size Selection” section:
+
+If you chose the Inpainting method, continue with the Inpainting Setup section.
+
+If you selected the First Frame plus ControlNet method, move on to the Control Section at the bottom of the graph.
+
+7. INPAINTING SETUP
+
+In this section, you can choose (1) between two options: an animated inpainting mask or a manual static mask.
+
+The animated inpainting mask is generated from the animated points. The grey masked area (2) indicates where the character from your reference image will be generated.
+
+Use the "GrowMask" node (3) to expand or shrink the masked area. Be cautious though—large values can significantly increase processing time.
+
+Alternatively, you can draw a static mask on the first frame (4). With this option, the figure will only appear inside your manually defined area.
+
+8. CONTROL
+
+If your scene includes another humanoid figure, the DWPose Estimator will generate an additional Pose ControlNet.
+
+You have three options:
+
+Pose + Points
+
+Points
+
+Pose
+
+This allows you to flexibly choose how the motion is controlled.
+
+9. START FRAME
+
+Choose here the first image for generation:
+
+Use first frame of video - great if your character is appearing from behind an object or a person.
+
+Use first frame with inpainting mask - best option if the character is already visible in the frame
+
+Import your own Start Frame - If you're using the First Frame plus ControlNet workflow, you can upload a prepared frame where the figure has already been inserted (e.g., using the Flux Inpainting Workflow).
+
+10. VIDEO GENERATION
+
+In the final section, you'll find:
+
+a Bypass Node to temporarily deactivate the current node, which helps when adjusting earlier settings
+
+a Prompt Node, where it's best to use detailed and descriptive prompts to achieve high-quality figure integration
+
+the Video Sampler, which is set to 8 steps by default. You can lower this to 2 steps for faster previews and seed testing.
+
+On the right side, you can preview how the generated video behaves with the point system.
+
+At the very end, you'll see the final video output without the overlayed point data.
+
+‹ Create Controllable Characters for your AI Movies [ADVANCED]
+
+3D Model Texturing Made Easy [ADVANCED] ›
+
+© 2025 Mickmumpitz
+
+Cookie Settings
+
+Contact Us
+
+Legal Notice
+
+Privacy statement
+
+We use cookies to personalize content, run ads, and analyze traffic.
