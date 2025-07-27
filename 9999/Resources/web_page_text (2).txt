@@ -7,12 +7,6 @@ Create Controllable Characters for your AI Movies
 
 [FULL GUIDE]
 
-᛫
-
-Jul 17, 2025
-
-᛫
-
 by Mickmumpitz
 
 Learn the game-changing free AI VFX workflow and discover how to add controllable creatures & consistent characters to any footage using just one reference image and Wan 2.1. VACE in ComfyUI. This tutorial walks you through cutting-edge AI animation techniques that compete with expensive studio methods, including motion control using Blender and After Effects. We'll show you these breakthrough AI video generation methods by creating a complete smartphone-shot short film featuring a magical crystal-cat-dragon. Whether you're making YouTube content, social media videos, or professional projects, these AI-powered VFX techniques will transform your creative process and help you produce high-quality creature animations using completely free, open-source AI tools.
@@ -26,9 +20,6 @@ Learn the game-changing free AI VFX workflow and discover how to add controllabl
 
 
 
-1. MODEL LOADERS
-
-In this section, you can download the required models using the links on the left side. Additionally, you have the option to increase the blocks_to_swap value in the “Video Block Swap” step if you're working with limited VRAM.
 
 2. VIDEO INPUT & SIZE SELECTION
 
@@ -129,19 +120,3 @@ the Video Sampler, which is set to 8 steps by default. You can lower this to 2 s
 On the right side, you can preview how the generated video behaves with the point system.
 
 At the very end, you'll see the final video output without the overlayed point data.
-
-‹ Create Controllable Characters for your AI Movies [ADVANCED]
-
-3D Model Texturing Made Easy [ADVANCED] ›
-
-© 2025 Mickmumpitz
-
-Cookie Settings
-
-Contact Us
-
-Legal Notice
-
-Privacy statement
-
-We use cookies to personalize content, run ads, and analyze traffic.
