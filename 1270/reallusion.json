@@ -1,0 +1,459 @@
+{
+  "6": {
+    "inputs": {
+      "text": [
+        "68",
+        2
+      ],
+      "clip": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "Result",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": [
+        "68",
+        6
+      ],
+      "steps": [
+        "68",
+        4
+      ],
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": [
+        "68",
+        7
+      ],
+      "model": [
+        "51",
+        0
+      ],
+      "positive": [
+        "62",
+        0
+      ],
+      "negative": [
+        "62",
+        1
+      ],
+      "latent_image": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": [
+        "68",
+        3
+      ],
+      "clip": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "40": {
+    "inputs": {
+      "pixels": [
+        "69",
+        0
+      ],
+      "vae": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "44": {
+    "inputs": {
+      "strength": [
+        "46",
+        2
+      ],
+      "start_percent": [
+        "46",
+        3
+      ],
+      "end_percent": [
+        "46",
+        4
+      ],
+      "positive": [
+        "45",
+        0
+      ],
+      "negative": [
+        "45",
+        1
+      ],
+      "control_net": [
+        "56",
+        0
+      ],
+      "vae": [
+        "67",
+        0
+      ],
+      "image": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplySD3",
+    "_meta": {
+      "title": "Apply Controlnet with VAE (Depth)"
+    }
+  },
+  "45": {
+    "inputs": {
+      "strength": [
+        "47",
+        2
+      ],
+      "start_percent": [
+        "47",
+        3
+      ],
+      "end_percent": [
+        "47",
+        4
+      ],
+      "positive": [
+        "60",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "control_net": [
+        "57",
+        0
+      ],
+      "vae": [
+        "67",
+        0
+      ],
+      "image": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplySD3",
+    "_meta": {
+      "title": "Apply Controlnet with VAE (Pose)"
+    }
+  },
+  "46": {
+    "inputs": {
+      "control_net_type": "depth",
+      "control_net_path": "RenderImageDepth.png",
+      "control_net_state": true,
+      "control_net_strength": 0.5,
+      "control_net_start_percent": 0,
+      "control_net_end_percent": 0.6000000000000001
+    },
+    "class_type": "control_net",
+    "_meta": {
+      "title": "RL Set ControlNet"
+    }
+  },
+  "47": {
+    "inputs": {
+      "control_net_type": "open_pose",
+      "control_net_path": "RenderImageOpenPose.png",
+      "control_net_state": true,
+      "control_net_strength": 1,
+      "control_net_start_percent": 0,
+      "control_net_end_percent": 1
+    },
+    "class_type": "control_net",
+    "_meta": {
+      "title": "RL Set ControlNet"
+    }
+  },
+  "48": {
+    "inputs": {
+      "image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "LoadImageFromPath",
+    "_meta": {
+      "title": "Depth"
+    }
+  },
+  "49": {
+    "inputs": {
+      "image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "LoadImageFromPath",
+    "_meta": {
+      "title": "Pose"
+    }
+  },
+  "51": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "55": {
+    "inputs": {
+      "control_net_name": "FLUX.1-dev-ControlNet-Union-Pro-2.0/diffusion_pytorch_model.safetensors",
+      "model": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "DiffControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model (diff)"
+    }
+  },
+  "56": {
+    "inputs": {
+      "type": "depth",
+      "control_net": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "SetUnionControlNetType",
+    "_meta": {
+      "title": "SetUnionControlNetType"
+    }
+  },
+  "57": {
+    "inputs": {
+      "type": "openpose",
+      "control_net": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "SetUnionControlNetType",
+    "_meta": {
+      "title": "SetUnionControlNetType"
+    }
+  },
+  "58": {
+    "inputs": {
+      "ckpt_name": "flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "60": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "62": {
+    "inputs": {
+      "strength": [
+        "64",
+        2
+      ],
+      "start_percent": [
+        "64",
+        3
+      ],
+      "end_percent": [
+        "64",
+        4
+      ],
+      "positive": [
+        "44",
+        0
+      ],
+      "negative": [
+        "44",
+        1
+      ],
+      "control_net": [
+        "65",
+        0
+      ],
+      "vae": [
+        "67",
+        0
+      ],
+      "image": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplySD3",
+    "_meta": {
+      "title": "Apply Controlnet with VAE (Canny)"
+    }
+  },
+  "63": {
+    "inputs": {
+      "image": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "LoadImageFromPath",
+    "_meta": {
+      "title": "Canny"
+    }
+  },
+  "64": {
+    "inputs": {
+      "control_net_type": "canny",
+      "control_net_path": "RenderImageCanny.png",
+      "control_net_state": false,
+      "control_net_strength": 0.5,
+      "control_net_start_percent": 0,
+      "control_net_end_percent": 0.5
+    },
+    "class_type": "control_net",
+    "_meta": {
+      "title": "RL Set ControlNet"
+    }
+  },
+  "65": {
+    "inputs": {
+      "type": "canny/lineart/anime_lineart/mlsd",
+      "control_net": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "SetUnionControlNetType",
+    "_meta": {
+      "title": "SetUnionControlNetType"
+    }
+  },
+  "66": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "67": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "68": {
+    "inputs": {
+      "render_output_path": "RenderImage.png",
+      "input_type": "image",
+      "output_type": "image",
+      "frame_rate": 12,
+      "positive_prompt": "",
+      "negative_prompt": "",
+      "steps": 28,
+      "cfg": 1,
+      "seed": 230004747319444,
+      "denoise": 0.8800000000000001,
+      "select_model": "",
+      "audio_path": ""
+    },
+    "class_type": "core",
+    "_meta": {
+      "title": "RL AI Render UI Core"
+    }
+  },
+  "69": {
+    "inputs": {
+      "image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "LoadImageFromPath",
+    "_meta": {
+      "title": "Resource"
+    }
+  }
+}
