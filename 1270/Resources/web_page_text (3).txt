@@ -1,0 +1,231 @@
+Skip to main content
+​
+​
+Reallusion Home
+Reallusion Magazine
+Feedback Tracker
+FAQ
+Legacy Forum
+Log In
+Latest
+Top
+Badges
+CATEGORIES
+News & Announcements
+iClone
+Character Creator
+Cartoon Animator
+Open Beta
+ActorCore
+Reallusion Hub
+Content Developer
+Pipeline
+Content Store & Marketplace
+Event & Contest
+Showcase yourself
+All categories
+TAGS
+character-animation
+3d-animation
+character-creation
+cartoon-animator
+unreal-enigine
+All tags
+​
+[Official]📶Maximize AI Render Performance: Custom Workflow Setup & Tips
+Open Beta
+AI render
+283
+views
+7
+likes
+6
+links
+Aug 1
+1 / 7
+Aug 1
+2d
+jason_RL
+1
+17d
+
+Creating a custom workflow can be powerful — but also a bit tricky, especially when working with ComfyUI and advanced AI models. That’s why we’ve opened this thread, not just to provide guides and resources, but to give everyone a space to exchange knowledge, share experiences, and help each other grow stronger together.
+
+This thread is for:
+
+ Learning how to build and modify your own custom workflows
+ Downloading and installing Reallusion’s custom nodes
+ Discussing advanced setups, cloud rendering, and AI models
+ Sharing your own workflows and seeing how others build theirs
+
+When sharing your workflows, please include Hugging Face links or sources for the models you used. This helps others test, learn, and improve more easily.
+
+If you’ve created a custom setup, made tweaks to the pipeline, or integrated high-end models — we’d love to see it!
+
+ Step-by-Step Guide + Sample Workflow
+
+Want to learn how to build and reuse your custom workflows?
+ Check out our step-by-step guide — it walks you through:
+
+How Reallusion nodes interact with the UI in Character Creator and iClone
+
+How to save your custom workflows as AI Render presets
+
+How to reuse your favorite setups instantly inside the app
+
+We’ve also included a Flux image-to-image sample workflow to help you get started quickly — you can use it as-is or modify it for your own projects.
+
+ Where to Get the AI Render Custom Nodes
+
+If you’re already working in ComfyUI and want to integrate AI Render into your workflow, you’ll need to install Reallusion’s custom nodes:
+
+Where to Get Custom Nodes:
+
+ Local path (if you have iClone 8 installed):
+C:\Program Files\Reallusion\iClone 8\AIRender\custom_nodes\ComfyUI-Reallusion
+
+ GitHub (latest version):
+https://github.com/reallusion/ComfyUI-Reallusion
+
+How to Install:
+
+Copy the contents into your ComfyUI folder here:
+ComfyUI\custom_nodes
+
+ More Help Coming Soon
+
+This is just the beginning — we know building custom workflows takes time and practice. To support you further, we’re planning a series of webinars and in-depth tutorials to walk through advanced setups, cloud integration, and best practices. We’ll release them as soon as they’re ready — stay tuned!
+
+
+
+5
+​
+​
+[Official]  Consistent Characters and Precise Control for AI Films and Commercial Production
+283
+views
+7
+likes
+6
+links
+fareast1
+15d
+
+This is AWESOME!!! I cant wait to see what comes next. More please, webinars, tutorials and cloud integration. 
+
+
+
+​
+​
+[Official]  Consistent Characters and Precise Control for AI Films and Commercial Production
+playlogic
+8d
+
+Created a SDXL Workflow for the Community
+
+github.com
+GitHub - regiellis/sdxl-workflow-rl: Simple SDXL workflow meant for use with ComfyUI...
+
+Simple SDXL workflow meant for use with ComfyUI and Reallusion's AI Render
+
+
+
+1 Reply
+2
+​
+​
+jason_RL
+4d
+
+Hi all,
+
+Registration is now open for our first AI Render webinar, happening Aug 22, 2025 (PST/PDT)!
+In this session, we’ll show you how to set up Flux 1 Dev on cloud GPU and connect it with iClone, unlocking production-level AI image generation with precise 3D guidance.
+
+image
+512×288 46.7 KB
+
+Webinar Outline:
+
+Launching Cloud GPU & Connecting to iClone
+Adding a Custom Flux 1 Dev Workflow to iClone
+Flux 1 Dev Overview
+Image Workflow Breakdown – LoRA, ControlNet, and recommended render settings for character consistency
+Q&A Session
+
+This is the first of three webinars in our AI Render series, and all three are open for registration now. Each session explores a different advanced AI workflow, so be sure to join them all.
+
+ Learn more and register here: Reallusion Courses - Free Online Tutorials for 2D & 3D Animations
+
+
+
+​
+​
+subtextdelhi
+playlogic
+4d
+
+It’s guys like you who keep the community going…am going to try your workflow tonight…Big ups
+
+
+
+​
+​
+animagic
+4d
+ subtextdelhi:
+
+It’s guys like you who keep the community going
+
+I agree, but it will require some studying on my part to understand it all. I have done hardly anything with various AI models and my brain is quite old. 
+
+
+
+​
+​
+subtextdelhi
+2d
+
+Ya…it’s going to take some tinkering to get this going - I think a basic understanding of comfy is essential to get this up and running. Hope someone puts out some videos on how to make and run custom workflows so that noobs like me can follow it to the T, lol
+
+
+
+​
+​
+Hello! Looks like you’re enjoying the discussion, but you haven’t signed up for an account yet.
+
+Tired of scrolling through the same posts? When you create an account you’ll always come back to where you left off. With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great. 
+
+Sign Up
+Maybe later
+no thanks
+
+
+New & Unread Topics
+Topic list, column headers with buttons are sortable.
+Topic	Replies	Views	Activity
+
+Love the integration!
+AI render
+	2	55	1d
+
+Built an SDXL and 7 custom nodes to work with the AI open beta render
+AI render
+	2	69	8d
+
+[Official]  Consistent Characters and Precise Control for AI Films and Commercial Production
+AI render
+	18	1.1k	2h
+
+[Official]  Fully Customizable 2D, 3D, and Photorealistic Rendering Styles
+AI render
+	38	957	2h
+
+Render Ai as Photo Editor
+AI render
+character-creation
+	2	38	3h
+Want to read more? Browse other topics in 
+AI render
+ or view latest topics.
+Powered by Discourse

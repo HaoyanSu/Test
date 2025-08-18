@@ -1,0 +1,191 @@
+    
+ MAGAZINE
+Search
+SEARCH
+Categories
+ 
+Tags
+ 
+Facebook
+Instagram
+Youtube
+Twitter
+July 28, 2025
+AI Render for iClone & Character Creator Enters Open Beta with ComfyUI Workflow
+AI RenderActorCoreAnimationCharacter CreatorCommercial AdsFilms & MoviesSpotlightiCloneiClone Picks
+Share
+Discover how AI is used to reimagine 3D visuals, and how you can win a FREE CC5!
+
+We’re excited to launch the Open Beta of AI Render plugin, a powerful and completely free tool that bridges real-time 3D animation with AI-powered rendering, seamlessly integrated into the ComfyUI workflow.
+
+Whether you want to explore creative, stylized AI generations or need consistent, frame-accurate results for production, AI Render is built to deliver both. It’s a flexible, scalable solution designed to meet the full range of creator needs — from fast, artistic exploration to precise, professional fine-grain control.
+
+▼ Download & Get Started ▼
+
+Join Open Beta Now
+
+ComfyUI + Reallusion = Speed, Accessibility, and Ease
+
+The ComfyUI workflow is a powerhouse in the AI art community, known for its flexible, node-based system that supports ControlNet, LoRA, and fully customizable pipelines. Combined with Reallusion’s fast, beginner-friendly tools like Character Creator and iClone — which offer intuitive slider-based design, drag-and-drop assets, and real-time scene editing. To make this integration possible, AI Render uses custom nodes that connect Reallusion’s 3D environments directly into the ComfyUI ecosystem.
+
+For Reallusion users, AI Render works seamlessly within familiar tools — no ComfyUI experience needed. For ComfyUI users, it enables precise 3D-guided generation and full freedom to build custom workflows with added control and consistency.
+
+22 Style Presets, Endless Possibilities
+
+AI Render includes 22 professionally tuned style presets across three types: Realistic, 3D, and 2D.
+
+It offers 11 AI Image Generation models for still renders and 11 AI Video Generation models optimized for consistent frame-by-frame results, giving you a quick, creative head start for both image and video projects.
+
+By default, AI Render runs locally using Stable Diffusion 1.5, Wan2.1 Fun 1.3B Control, and Wan2.1 VACE 1.3B models, which are optimized for quality and performance on accessible hardware.
+
+For users seeking more advanced or cinematic results, AI Render also supports third-party high-end models such as Flux, HiDream, and FusionX. These require significantly more GPU power or access to a cloud GPU platform like RunPod or RunComfy. More details are available on the [official forum].
+
+Prompt to Precision: Fine-Tune AI Gen with Text 
+
+You can further customize your results using text prompts, which offer more detailed control. Use positive prompts to guide the AI toward desired styles and features, and negative prompts to filter out unwanted elements or distortions.
+
+Style It with a Reference: Customization Using IP Adapter
+
+If you struggle to find the exact style you want or find prompting difficult, AI Render supports reference-based generation with the use of IP Adapters. This feature lets you upload an image, and the AI will follow its style, lighting, and tone — delivering consistent visual results without the need for perfect prompt wording. 
+
+Beyond Pixel Control: Precision with 3D-Generated ControlNet
+
+ControlNet guides AI generation using structural inputs in addition to prompts. With AI Render, these inputs are generated directly from your 3D environment in iClone and Character Creator, including characters, scene layout, camera framing, and lighting. This delivers accurate, frame-by-frame guidance the AI can follow, without relying on error-prone 2D estimations.
+
+With a massive asset library in the Reallusion ecosystem — featuring drag-and-drop characters, motions, props, and environments — all easily searchable with Deep Search directly in the software, it’s quick and effortless to build a strong foundation for generating high-quality ControlNet inputs.
+
+ControlNet Modes Supported in AI Render
+
+Depth — Spatial layering and facial accuracy
+
+Depth maps from 3D data ensure stable shot distance and accurate layering across frames. Unlike 2D-estimated maps, 3D depth can be manually adjusted for close-ups or wide shots, maintaining correct focus and detail — essential for consistent facial expression control at any distance.
+
+Pose — Reliable skeletal tracking, even with occlusion
+
+2D OpenPose often fails when faces or limbs are obscured or off-frame. 3D OpenPose maintains accurate skeletal tracking throughout, even in complex scenes with multiple interacting characters, ensuring precise timing and body alignment from frame to frame.
+
+Normal — Surface lighting and shading
+
+3D normals offer smooth surface angles for stable lighting and consistent shading. Combined with iClone and Character Creator’s lighting tools, you get clean forms, cinematic highlights, and professional visual quality every frame.
+
+Edge (Canny) — Clean outlines for stylized renders
+
+3D-generated canny edges produce clean, geometry-based outlines — perfect for stylized renders like anime, ink, or line art. When paired with 3D depth, they provide strong compositional control for layered characters and environments.
+
+Prompt: Oil Painting,Bearly,masterpiece, best quality, cyberpunk alley, glowing neon signs, wet floor, vending machines, old pipes, rusty walls, robot citizens, futuristic graffiti, orange and teal lighting, cinematic atmosphere, high detail
+Multi-Inputs + Camera Control
+
+You can combine multiple ControlNet inputs for stronger character and scene control. Each input is adjustable via threshold sliders, giving you precision over structure, influence, and visual style.
+
+Pair this with iClone’s powerful camera tools — including lens control, framing, and automated paths — to shape your AI compositions with cinematic perspective and storytelling precision.
+
+Create, Own, and Scale: Build Your Own IP and LoRAs
+
+With Character Creator and iClone, you can create fully rigged, original characters ready for games, animation, virtual production, merchandise, and more. These are professional assets you own and can use across all industries.
+
+Now, with AI Render, your original characters can easily step into AI-powered storytelling to star in AI-generated movies, commercials, and creative projects. By bringing your 3D characters into the ComfyUI workflow, AI Render enables fast, stylized video generation that maintains consistency and gives you full creative control.
+
+Your characters don’t just look good — they behave with the consistency, emotion, and presence of a real person, making them ready for any story you want to tell.
+
+To achieve this high-quality, consistent result in AI generation, LoRA (Low-Rank Adaptation) training is essential. LoRAs are lightweight AI models that preserve your character’s unique look and style across frames, scenes, and creative variations. 
+
+With batch rendering, pose libraries, and automated camera paths in iClone, you can quickly build LoRA training datasets from multiple angles and motions.
+
+Whether you’re creating one character or an entire IP universe, Character Creator, iClone, and AI Render provide a creator-owned pipeline.
+
+ AI Makeover Challenge: Chance for Free CC5!
+
+To celebrate the arrival of the AI Render Plugin, we’re launching a special community challenge from July 28th to August 29th!
+
+This is your chance to recreate your favorite CC4 characters using AI Render — give them a fresh look, a new style, or a completely reimagined story through AI-powered generation.
+
+How to Participate
+
+Let your creativity fly as you reimagine your CC4 character with AI Render in the form of an image or video.
+
+We’ll randomly select one winner each week to receive a free copy of CC5.
+Winners will be announced on August 11th, 18th, 25th, and September 1st via the official forum thread and Reallusion’s Instagram account.
+
+1st Entry Window: Jul 28 – Aug 8, the winner will be announced on Aug 11
+
+2nd Entry Window: Aug 8 – Aug 15, the winner will be announced on Aug 18
+
+3rd Entry Window: Aug 15 – Aug. 22, the winner will be announced on Aug 25
+
+4th Entry Window: Aug 22 – Aug 29, winner will be announced on Sep 1
+
+The first entry window lasts two weeks to give everyone time to get familiar with the plugin.
+
+How to Submit Your Entry
+
+Post your work in the official forum thread (required to be eligible).
+Share it to your Instagram Story (optional bonus)
+Tag @Reallusion
+Use hashtags: #CC4ever and #ReallusionAIRender
+Make sure your account is public
+
+Submitting to both channels earns you two entries total — one from the forum, and one bonus from Instagram. Each person can only win once and will be excluded from future draws.
+
+Get Started
+
+Visit the Reallusion Official Forum to:
+
+Download the AI Render Plugin Installer
+Access the installation guide and product demos
+Stay up to date with official announcements
+Report bugs and get technical support
+Connect with fellow creators in the growing AI Render community
+
+Looking to explore the Open Beta or join the community challenge? The Reallusion forum is your gateway to it all. Join us and help shape the future of AI-powered 3D creation with the full force of the ComfyUI integration.
+
+Like this:
+Loading...
+Related topics
+AI RenderActorCoreAnimationCharacter CreatorCommercial AdsFilms & MoviesSpotlightiCloneiClone Picks
+Share
+Leave a Reply
+Prev
+Previous
+Character Creator 5 Release Rescheduled to August 27
+RECOMMENDED POSTS
+Product Release
+AI Render for iClone & Character Creator Enters Open Beta with ComfyUI Workflow
+July 28, 2025
+Product Release
+Character Creator 5 Release Rescheduled to August 27
+July 18, 2025
+Product Release
+AccuRIG 2 Debuts Direct In-App Access to 4,500+ ActorCore Motions
+July 14, 2025
+Product Release
+Reallusion Announces Character Creator 5: The Next Evolution of Real-Time 3D Character Creation Software
+April 7, 2025
+DOWNLOAD
+ 
+iClone
+Character Creator
+Cartoon Animator
+ActorCore AccuRIG FREE
+PURCHASE
+ 
+Software Store
+Content Store
+Content Marketplace
+Educational Licensing
+Enterprise License & Special Requests
+Volume Licensing
+Content Licensing
+Reallusion PRIME 
+COMMUNITY
+ 
+Forum
+Magazine
+Developer Center
+Global Training Network
+GET THE LATEST UPDATE
+
+Enter your email
+
+SUBMIT
+
+Copyright©2024 Reallusion Inc. All rights reserved
